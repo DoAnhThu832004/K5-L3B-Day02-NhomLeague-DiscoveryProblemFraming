@@ -35,9 +35,11 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A – Học tập và giải quyết bài tập | #2 Debug Python, #4 Tóm tắt bài giảng/cuộc họp, #7 Kiểm tra assignment, #8 Xác định kiến thức còn yếu | Người học gặp khó khăn khi xử lý, hiểu và áp dụng thông tin trong quá trình học tập. |
+| B – Quản lý nhiệm vụ và thời gian | #6 Tổng hợp nhiệm vụ và deadline, #10 Theo dõi nhiều deadline | Thông tin về công việc và thời hạn nằm ở nhiều nguồn, khiến người dùng phải kiểm tra và tổng hợp thủ công. |
+| C – Phân tích thông tin để đưa ra quyết định | #1 Quản lý tồn kho, #3 Phân tích đánh giá sản phẩm, #9 Tìm vị trí thực tập | Người dùng cần đọc, đối chiếu và phân tích nhiều nguồn thông tin để đưa ra lựa chọn phù hợp. |
+| D – Hiểu thông tin quan trọng trong đời sống | #5 Thanh toán online cho người lớn tuổi, #11 Hiểu đơn thuốc viết tay | Người dùng gặp khó khăn khi hiểu thông tin quan trọng, có nguy cơ thực hiện sai thao tác hoặc hiểu sai hướng dẫn. |
+| E – Phân loại thông tin khách hàng | #12 Phân loại tin nhắn phản ánh của khách hàng | Nhân viên cần xác định nội dung và mức độ ưu tiên của tin nhắn để chuyển đúng người xử lý. |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
