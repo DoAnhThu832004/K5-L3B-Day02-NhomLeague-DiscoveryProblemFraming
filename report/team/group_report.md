@@ -279,39 +279,85 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+**Bài của nhóm nằm ở ô:** Độ mơ hồ cao × Độ phức tạp cao.
 
-Vì sao:
+**Vì sao:**
+
+Bài toán quản lý tồn kho và đề xuất nhập hàng cho cửa hàng thời trang có độ mơ hồ cao vì nhu cầu mua hàng không cố định. Cùng một mẫu quần áo có thể bán nhanh hoặc chậm tùy màu sắc, kích cỡ, mùa vụ và chương trình khuyến mãi. Không phải lúc nào cũng có một số lượng nhập hàng tối ưu duy nhất, vì quyết định cuối cùng còn phụ thuộc vào ngân sách và kinh nghiệm của chủ shop.
+
+Độ phức tạp cao vì quy trình sử dụng nhiều nguồn dữ liệu như POS, Google Sheets, lịch sử bán hàng và thông tin nhà cung cấp. Hệ thống cần đối chiếu số lượng tồn kho theo từng SKU, tính tốc độ bán, xem xét thời gian giao hàng và đề xuất số lượng nhập phù hợp.
+
+Tuy nhiên, quy trình xử lý gồm các bước tương đối cố định. Vì vậy, nhóm đề xuất sử dụng **Workflow** kết hợp Rule và AI, thay vì Agent tự quyết định toàn bộ quá trình.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Chuẩn hóa dữ liệu tồn kho trong Excel/Google Sheets, sử dụng bảng theo dõi và checklist nhập hàng. Chủ shop tự tính toán và quyết định số lượng nhập. | Phù hợp với shop nhỏ, số lượng SKU ít và nhu cầu bán hàng tương đối ổn định. | Vẫn mất thời gian đối chiếu thủ công, dễ sai khi có nhiều biến thể màu sắc và kích cỡ. | Không chọn làm phương án chính. |
+| **Rule** | Sử dụng công thức tính tốc độ bán, số ngày còn hàng và ngưỡng Min/Max để cảnh báo tồn kho thấp, đồng thời gợi ý số lượng cần nhập. | Đủ khi dữ liệu chính xác, tốc độ bán ổn định và các quy tắc nhập hàng có thể xác định trước. | Ngưỡng cố định có thể không phản ánh tốt biến động theo mùa hoặc chương trình khuyến mãi. Tuy nhiên, Rule có thể giải quyết phần lớn nhu cầu của shop nhỏ. | Chọn làm nền tảng và phương án dự phòng. |
+| **Workflow** | Rule đồng bộ tồn kho và tính run-rate, AI hỗ trợ dự báo nhu cầu và tạo đề xuất nhập hàng [DRAFT], chủ shop kiểm tra ngân sách và phê duyệt, Rule tạo phiếu PO, chủ shop gửi đơn cho nhà cung cấp. | Phù hợp khi có đủ dữ liệu lịch sử để đánh giá dự báo, quy trình cố định và cần con người kiểm soát quyết định nhập hàng. | AI có thể dự báo sai, đề xuất nhập quá nhiều hoặc bỏ sót SKU sắp hết hàng. Cần kiểm thử với dữ liệu thực tế và yêu cầu chủ shop duyệt. | **Đề xuất chọn để kiểm chứng.** |
+| **Agent** | AI tự lựa chọn cách phân tích, truy vấn nhiều nguồn, quyết định các bước tiếp theo và có thể chuẩn bị quy trình đặt hàng theo tình huống. | Chỉ cần thiết khi quy trình có nhiều tình huống không thể định nghĩa trước và AI phải tự quyết định bước tiếp theo. | Khó kiểm soát, tăng chi phí, có nguy cơ đưa ra quyết định nhập hàng không phù hợp hoặc thao tác vượt quyền. | Không chọn. |
 
-**Mức chọn:**
+**Mức chọn:** Workflow kết hợp Rule + AI + Human-in-the-loop (HITL).
 
 **Vì sao không chọn mức đơn giản hơn:**
+
+No AI vẫn yêu cầu chủ shop đối chiếu và tính toán thủ công, trong khi bước này đang chiếm 25/55 phút trong quy trình hiện tại.
+
+Rule có thể giải quyết việc tổng hợp dữ liệu, tính tốc độ bán và cảnh báo tồn kho thấp. Đây là phương án cần triển khai và kiểm chứng trước vì chi phí thấp, dễ giải thích và có thể xử lý phần lớn công việc.
+
+Tuy nhiên, Rule với ngưỡng cố định có thể gặp hạn chế khi nhu cầu bán thay đổi theo mùa, màu sắc, kích cỡ hoặc chương trình khuyến mãi. Workflow cho phép bổ sung một bước AI để thử dự báo nhu cầu trên nhóm hàng cơ bản có lịch sử bán ổn định.
+
+Nhóm chỉ nên giữ bước AI nếu kết quả kiểm thử chứng minh nó cải thiện chất lượng đề xuất nhập hàng so với Rule. Nếu AI không tạo ra lợi ích rõ ràng hoặc dữ liệu chưa đủ tốt, nhóm sẽ sử dụng Rule-based.
+
+**Vì sao không chọn Agent:**
+
+Quy trình nhập hàng đã có các bước xác định trước và không yêu cầu AI tự lựa chọn toàn bộ hành động. Ngoài ra, quyết định nhập hàng liên quan trực tiếp đến ngân sách và vốn kinh doanh. Vì vậy, Agent làm tăng rủi ro và độ phức tạp không cần thiết.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | AI hỗ trợ dự báo nhu cầu bán hàng theo từng SKU (mẫu, màu, size), xác định SKU có nguy cơ hết hàng hoặc tồn kho lâu và tạo bảng đề xuất số lượng nhập thêm ở trạng thái [DRAFT], kèm lý do. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Chủ shop xem xét số lượng tồn thực tế, tốc độ bán, ngân sách, xu hướng thị trường, chương trình khuyến mãi và khả năng giao hàng của nhà cung cấp. Chủ shop quyết định giữ, sửa hoặc từ chối đề xuất của AI. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Sau khi chủ shop phê duyệt số lượng, hệ thống Rule tạo phiếu đặt hàng PO và tính tổng chi phí. Chủ shop kiểm tra lần cuối, gửi đơn qua Zalo và xác nhận với nhà cung cấp. AI không tự gửi đơn hoặc thanh toán. |
+| **Outcome** — đo kết quả bằng gì? | Thời gian lập danh sách nhập hàng giảm từ baseline 55 phút xuống dưới 20 phút/tuần. Theo dõi thêm tỷ lệ SKU tồn đọng sau 30 ngày, tỷ lệ thiếu hàng và mức sai lệch giữa số lượng đề xuất với nhu cầu thực tế. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Dữ liệu tồn kho theo SKU, lịch sử bán hàng, số lượng đổi trả, giá nhập, thời gian giao hàng, thông tin khuyến mãi và ngân sách nhập hàng. Báo cáo nhóm đã xác định POS/Sheets và lịch sử bán hàng là các nguồn dự kiến. Cần kiểm tra khả năng xuất dữ liệu và độ đầy đủ của lịch sử trước khi dùng ML. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Lưu bản đề xuất [DRAFT], số lượng chủ shop chỉnh sửa, số lượng thực tế đã nhập, doanh số sau nhập, số SKU hết hàng và hàng tồn sau 30 ngày. Dùng dữ liệu này để đánh giá sai lệch và cải thiện quy tắc hoặc mô hình dự báo. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+**1. Người dùng muốn được hỗ trợ (augment) hay giao hẳn việc (automate)? Bằng chứng:**
 
+Nhóm đề xuất hướng **Augment (hỗ trợ con người)**, không tự động hóa hoàn toàn quyết định nhập hàng.
+
+Theo nội dung kiểm chứng ở Mục 3.2, người bán gặp khó khăn khi phải đối chiếu số lượng tồn kho và tốc độ bán theo từng màu, size. Đồng thời, một số người được hỏi cho rằng công thức Min/Max trong Excel đã đủ và không cần AI.
+
+Vì vậy, hệ thống nên tự động hóa các bước tính toán có quy tắc rõ ràng, đồng thời hỗ trợ tạo bản đề xuất nhập hàng để chủ shop xem xét.
+
+Chủ shop vẫn phải có quyền điều chỉnh số lượng, cân đối ngân sách và quyết định gửi đơn. Mức độ sẵn sàng sử dụng đề xuất AI cần được kiểm chứng thêm bằng hành vi thực tế.
+
+**2. AI sai kiểu nào tệ hơn: báo nhầm hay bỏ sót? Vì sao, và thiết kế xử lý thế nào?**
+
+Cả hai loại lỗi đều ảnh hưởng đến kinh doanh:
+
+**Báo nhầm (False Positive):** AI dự báo nhu cầu cao hơn thực tế và đề xuất nhập quá nhiều. Hậu quả là tăng tồn kho, đọng vốn và có thể phải giảm giá để thanh lý hàng.
+
+**Bỏ sót (False Negative):** AI không nhận diện SKU có nguy cơ hết hàng. Hậu quả là shop thiếu hàng, mất doanh thu và có thể mất khách hàng.
+
+Trong phạm vi bài toán của nhóm, cần đặc biệt kiểm soát lỗi báo nhầm dẫn đến nhập dư hàng, vì kết quả phỏng vấn ở Mục 3.2 đã ghi nhận trường hợp tồn nhiều sản phẩm khó bán và phải giảm giá để thu hồi vốn.
+
+Tuy nhiên, nhóm vẫn phải theo dõi cả tỷ lệ thiếu hàng để tránh tình trạng giảm tồn kho nhưng làm mất doanh thu.
+
+**Thiết kế kiểm soát:**
+
+1. Mọi đề xuất AI đều ở trạng thái [DRAFT] và bắt buộc chủ shop phê duyệt.
+2. Hệ thống hiển thị số lượng tồn, tốc độ bán, thời gian giao hàng và lý do đề xuất để người dùng đối chiếu.
+3. Các đề xuất số lượng bất thường hoặc vượt ngân sách phải được cảnh báo để kiểm tra lại.
+4. Không sử dụng dự báo AI cho các mặt hàng hot trend có lịch sử bán không đủ hoặc biến động quá mạnh.
+5. Khi AI không đáng tin cậy hoặc gặp sự cố, hệ thống chuyển về phương án Rule-based; chủ shop có thể chỉnh sửa số lượng thủ công.
+6. Theo dõi tỷ lệ nhập dư, thiếu hàng và sai lệch dự báo trong thời gian thử nghiệm để quyết định có tiếp tục sử dụng AI hay không.
+7. 
 ---
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
