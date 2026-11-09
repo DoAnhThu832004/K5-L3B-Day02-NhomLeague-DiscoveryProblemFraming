@@ -149,16 +149,16 @@ HIỆN TẠI — Tổng: 15 phút/tin
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| **Pitch Problem Card** | Trình bày Card #1: *Tóm tắt mốc thời gian & việc cần làm từ file ghi âm bài giảng/buổi họp* (mất 55 phút nghe lại, tuần trước bỏ sót bài tập ở phút 75). | Bài toán được đưa vào danh sách pitch chung của nhóm để cùng so sánh, chấm điểm. |
+| **Phản biện bài của bạn khác** | **Câu hỏi tôi đã đặt (cho bài Quản lý tồn kho & nhập hàng - Đề tài chốt):** "Các phần mềm quản lý kho (POS/ERP) hiện nay đều có thể tự động đặt ngưỡng Min/Max và hiển thị cảnh báo dashboard dựa trên số liệu bán hàng. Tại sao nhóm phải dùng Machine Learning dự đoán phức tạp trong khi giải pháp phần mềm thông thường (Rule-based) đã giải quyết được phần lớn bài toán này?" | Bạn phụ trách bài toán giải thích: Rule-based chỉ giải quyết được việc cảnh báo tồn kho tĩnh, còn với ngành thời trang có tính mùa vụ và xu hướng thay đổi nhanh thì việc dự đoán số lượng nhập theo từng mẫu/size/màu cần phân tích dữ liệu lịch sử bán hàng ➔ Nhóm thống nhất đây là bài toán kết hợp Rule + AI (Rule quản lý kho, ML dự đoán xu hướng nhu cầu). |
+| **Nhận phản biện** | **Câu hỏi tôi nhận được (về bài ghi âm):** "Làm sao để hệ thống đoán được hoặc nắm bắt chính xác chủ đề (topic) của người nói khi bài giảng/buổi họp diễn ra liên tục, người nói chuyển mạch ý bất ngờ hoặc nói lan man mà không bị cắt vụn ngữ cảnh?" | **Tôi đã sửa gì:** Tôi điều chỉnh lại giả thuyết kỹ thuật và ranh giới an toàn: Thay vì để AI tự suy diễn chủ đề tùy tiện (rất dễ hallucination), hệ thống chỉ thực hiện phân đoạn ngữ nghĩa (Semantic Chunking) theo các mốc thời gian và từ khóa chuyển tiếp, rồi tạo nhãn mốc giờ (Timestamp). Bắt buộc người nghe bấm vào mốc giờ để nghe lại 15–30 giây ngữ cảnh gốc trước khi xác nhận chủ đề (Human-in-the-loop). |
+| **Gom cluster / cây OST** | | |
+| **Chọn candidate problem** | | |
+| **Kiểm chứng / research** | | |
+| **Quy trình nhóm** | | |
+| **Problem Statement** | | |
+| **Mức can thiệp AI** | | |
+| **Quyết định** | | |
 
 ---
 
@@ -166,12 +166,12 @@ HIỆN TẠI — Tổng: 15 phút/tin
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| **CP1 Scan** | Gợi ý thêm các góc nhìn về các vấn đề trong đời sống và quản lý cá nhân. | Gợi ý các tình huống thực tế về dữ liệu phi cấu trúc (như trích xuất toa thuốc viết tay, tin nhắn khiếu nại). | Đưa ra các ý tưởng giải pháp trá hình ("Trợ lý AI tự học bài", "Tối ưu hóa giấc ngủ") không có quy trình nghiệp vụ rõ ràng. | Loại bỏ hoàn toàn các ý mơ hồ; viết lại các ý được chọn theo đúng cấu trúc Job Story (*Khi... tôi muốn... để...*) và tự bổ sung số liệu thời gian/tần suất thật của bản thân. |
+| **CP2 Problem Card** | Đóng vai "PM hoài nghi" để phản biện Card #1 (Ghi âm bài giảng). | Bắt bẻ sắc bén: chỉ ra rằng nghe ở tốc độ 1.5x/2x có thể giải quyết được bài toán mà không cần AI. | Đề xuất xây dựng Agent tự động gửi danh sách task vào nhóm Zalo (quá phức tạp và dễ gây phiền toái nếu trích xuất nhầm). | Làm rõ trong quy trình: nút thắt không phải tốc độ nghe mà là **không biết đoạn nào có bài tập** để nhảy tới; kiên quyết giữ mức can thiệp ở Workflow (AI chỉ tạo timestamp nháp để người nghe tự duyệt). |
+| **CP4 Research** | Tìm kiếm các phần mềm quản lý kho/bán hàng (POS) và công cụ dự đoán tồn kho hiện có trên thị trường (KiotViet, Sapo, Odoo). | Tổng hợp nhanh danh sách các phần mềm phổ biến và các tính năng quản lý kho cơ bản (cảnh báo tồn kho Min/Max). | Tuyên bố rằng "hầu hết các phần mềm POS hiện nay đều đã tích hợp sẵn AI tự động dự báo lượng hàng cần nhập cho từng size/màu" (thực tế các gói cơ bản cho shop nhỏ chỉ dùng rule cảnh báo số lượng). | Tự tra cứu trực tiếp bảng giá và tài liệu tính năng của KiotViet/Sapo; xác nhận tính năng dự báo AI chuyên sâu chưa phổ biến ở phân khúc cửa hàng nhỏ lẻ. |
+| **CP5 Quy trình** | Hỗ trợ chuyển đổi các bước quy trình nhập hàng hiện tại và tương lai thành cú pháp sơ đồ Mermaid/ASCII. | Giúp format sơ đồ nhanh, trực quan, dễ nhìn. | Tự động bỏ qua bước chủ shop kiểm tra và chốt số lượng với nhà cung cấp, gộp thẳng từ bước "AI gợi ý" sang "Tự động gửi đơn đặt hàng". | Bổ sung bước Human-in-the-loop bắt buộc: chủ shop phải duyệt và điều chỉnh số lượng đề xuất trước khi liên hệ nhà cung cấp; thêm nhánh Fallback nếu dữ liệu bán hàng quá ít thì quay về dùng Rule tồn kho tối thiểu. |
+| **CP5–6 Problem Statement** | Rà soát các trường trong Problem Statement (đặc biệt là Success Metric và Boundary) xem có bị mơ hồ không. | Cảnh báo không được dùng các từ định tính như "giảm tồn kho hiệu quả", "tối ưu hóa lợi nhuận". | Gợi ý đặt mục tiêu quá viển vông: "Dự đoán chính xác 100% nhu cầu nhập hàng" (phi thực tế trong ngành thời trang phụ thuộc nhiều vào thời tiết/xu hướng). | Đặt lại Success Metric có tính khả thi: thời gian lập danh sách nhập hàng giảm ≥ 50%, tỷ lệ đề xuất đúng nhu cầu đạt ≥ 80% sau khi đối chiếu với quyết định thực tế của chủ shop. |
+| **CP6 Mức can thiệp / quyết định** | Phản biện lựa chọn giữa Rule-based và Machine Learning cho bài toán quản lý tồn kho. | Chỉ ra ranh giới rõ ràng: Rule đủ cho việc cảnh báo tồn kho tối thiểu, nhưng cần ML khi muốn phân tích tương quan giữa tốc độ bán, kích cỡ/màu sắc và tính mùa vụ. | Khuyên nhóm xây dựng hệ sinh thái Multi-Agent tự động liên hệ đàm phán giá với nhà cung cấp. | Nhóm kiên quyết từ chối giải pháp Agent; chốt mức can thiệp là **Rule + Workflow/AI hỗ trợ** và đề xuất quyết định **Go ở phạm vi nhỏ (Pilot)** kèm ngưỡng dừng nếu sai số vượt mức cho phép. |
 
 ---
 
