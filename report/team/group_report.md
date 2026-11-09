@@ -104,26 +104,31 @@ Giả định nhóm kiểm chứng trong buổi này:
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Cách đã dùng: Phỏng vấn chéo bạn học nhóm khác theo The Mom Test + Poll nhanh trong lớp
 
 Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi (vai trò, không ghi tên thật) | Bạn học nhóm khác — từng tự bán áo quần unisex trên Shopee 1 năm |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Bán online sợ nhất là đọng vốn, nhìn tổng tưởng có lãi nhưng đến cuối vụ mới thấy tồn cả đống size XL màu kén khách, tiền nằm chết ở đó." |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Đợt hè vừa rồi nhập 100 áo polo, màu đen/trắng size chuẩn cháy hàng sau 1 tuần; màu tím/vàng size to tồn 40 cái, phải xả lỗ 50% để thu hồi vốn. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Dùng Google Sheets trừ tồn thủ công mỗi ngày, cuối tuần tự ngồi cộng nhẩm số đã bán để tính xem có nên nhập tiếp không. |
+| Mất bao lâu, bao lần? | 45–60 phút mỗi tuần một lần. |
+| Insight / opportunity rút ra | Không thiếu chỗ ghi tồn kho, nhưng thiếu công cụ tính tốc độ bán (run-rate) theo từng phân loại màu/size để cảnh báo sớm. |
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn bạn học nhóm khác | 3 | 3/3 bạn đều mất 45–60 phút/tuần soi Excel/kho và từng bị đọng vốn do nhập lệch size/màu. | 1 bạn cho biết: Nếu quy mô dưới 20 đơn/tuần thì nhìn file Excel là nhớ, không cần thêm tool; đồ hot trend TikTok thay đổi theo tuần, AI không có dữ liệu cũ để đoán. |
+| Poll nhanh trong lớp | 6 | 4/6 bạn đồng ý việc tính số lượng cần nhập là bước đau đầu và dễ cảm tính nhất. | 2/6 bạn cho rằng đặt công thức Min/Max sẵn trong Excel là đủ giải quyết, không cần AI. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
+
+1. **Thu hẹp phạm vi:** Tập trung vào nhóm **hàng cơ bản (basic items)** có chu kỳ bán ổn định; loại bỏ việc dự đoán hàng hot trend ngắn ngày vì không có dữ liệu quá khứ.
+2. **Ranh giới an toàn (Boundary):** AI không tự động gửi đơn nhập hàng; chỉ tính toán và xuất danh sách đề xuất số lượng dạng **[DRAFT]** để người dùng tự duyệt.
+3. **Phân định công nghệ:** Quản lý kho và tính toán tốc độ bán dùng **Rule/Script**, AI hỗ trợ dự báo xu hướng nhu cầu và cảnh báo nguy cơ đọng vốn.
 
 ### 3.3. Research giải pháp đã có
 
