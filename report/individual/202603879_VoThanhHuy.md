@@ -20,8 +20,8 @@
 |---:|---|---|---|---|
 | 1 | Tốn thời gian | Khi muốn mua một sản phẩm được bán trên nhiều sàn thương mại điện tử, tôi muốn so sánh giá bán thực tế giữa các cửa hàng, để lựa chọn nơi mua phù hợp với ngân sách. | Người mua hàng trực tuyến, đặc biệt là sinh viên có ngân sách hạn chế. | Thời gian kiểm tra giá trên 3 cửa hàng: 15 phút. Bằng chứng: lịch sử tìm kiếm, ảnh chụp giá sản phẩm trên các sàn. |
 | 2 | Cần đọc, tổng hợp nhiều thông tin | Khi lựa chọn điện thoại hoặc laptop có nhiều phiên bản khác nhau, tôi muốn hiểu sự khác biệt về thông số kỹ thuật, để lựa chọn sản phẩm phù hợp với nhu cầu sử dụng. | Sinh viên, người mua thiết bị công nghệ chưa có nhiều kiến thức chuyên môn. | Số sản phẩm cần so sánh: 3; thời gian đọc thông số: 35 phút. Bằng chứng: các trang thông số sản phẩm đã xem. |
-| 3 | Cần đọc, tổng hợp nhiều thông tin | Khi một sản phẩm có nhiều đánh giá trái chiều từ người mua trước, tôi muốn xác định những ưu điểm và nhược điểm thường gặp, để hạn chế lựa chọn sản phẩm không đáp ứng nhu cầu. | Người mua sắm trực tuyến, đặc biệt khi mua sản phẩm có giá trị cao. | Số đánh giá đã đọc : 30; thời gian đọc đánh giá: 25 phút. Bằng chứng: lịch sử xem sản phẩm, đánh giá trên sàn thương mại điện tử. |
-| 4 | Tốn thời gian | Khi cùng một sản phẩm có nhiều chương trình giảm giá, mã ưu đãi và phí vận chuyển khác nhau, tôi muốn xác định tổng chi phí thực tế phải trả, để tránh lựa chọn đơn hàng có giá cuối cùng cao hơn dự kiến. | Người thường xuyên mua hàng trực tuyến và săn khuyến mãi. | Số chương trình ưu đãi cần kiểm tra: 3 chương trình; thời gian đối chiếu giá cuối cùng: 15 phút. Bằng chứng: ảnh giỏ hàng, giá thanh toán và các mã giảm giá. |
+| 3 | Tốn thời gian | Tốn thời gian tìm cơ hội thực tập phù hợp. Khi tìm vị trí thực tập, tôi muốn xác định các công việc phù hợp với kỹ năng hiện tại, để không mất thời gian đọc những tin tuyển dụng không đáp ứng điều kiện. | Sinh viên năm cuối, sinh viên mới tốt nghiệp và người chưa có kinh nghiệm làm việc đang tìm kiếm cơ hội thực tập. | Trong một lần tìm kiếm, tôi xem 20 tin tuyển dụng và mất khoảng 30 phút để đọc, đối chiếu yêu cầu với kỹ năng hiện tại. Bằng chứng: lịch sử tìm kiếm trên các trang tuyển dụng, đường dẫn và ảnh chụp các tin đã xem. |
+| 4 | Lặp lại | Khi có nhiều bài tập và hạn nộp từ các môn hoặc hoạt động khác nhau, tôi muốn nắm được thời hạn của từng việc, để sắp xếp thời gian và tránh nộp muộn. | Sinh viên tham gia nhiều môn học hoặc khóa đào tạo. | Cần đo 15 thuật ngữ cần tra cứu trong một buổi, 20 phút dành cho việc tìm hiểu. Bằng chứng: ghi chú học tập và lịch sử tra cứu. |
 | 5 | Pain từ người khác | Khi người thân hoặc bạn bè nhờ tôi tư vấn mua thiết bị công nghệ, tôi muốn xác định sản phẩm phù hợp với nhu cầu và ngân sách của họ, để đưa ra lời tư vấn có căn cứ mà không phải tìm kiếm quá nhiều lần. | Người được nhờ tư vấn và người cần mua thiết bị. | Số lần được nhờ tư vấn: 2 lần/tháng; thời gian tìm kiếm mỗi lần: 40 phút\lần. Bằng chứng: tin nhắn nhờ tư vấn đã ẩn thông tin cá nhân, danh sách sản phẩm từng so sánh. |
 
 **Nếu có dùng AI để gợi ý thêm:**
@@ -80,81 +80,82 @@ B6. Tổng hợp ưu, nhược điểm — 2 phút
 Tổng: 28 phút/lần
 ```
 
-*Các mốc thời gian từng bước là ước tính phân bổ để dựng quy trình, chưa phải số liệu đo riêng từng bước.*
-
-### Problem Card #2 — So sánh thông số kỹ thuật
+### Problem Card #2— Tìm cơ hội thực tập phù hợp
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi lựa chọn điện thoại hoặc laptop có nhiều phiên bản khác nhau, tôi muốn hiểu sự khác biệt về thông số kỹ thuật, để lựa chọn sản phẩm phù hợp với nhu cầu sử dụng. |
-| Actor | Sinh viên và người mua thiết bị công nghệ chưa có nhiều kiến thức chuyên môn hoặc người chưa biết mình phù hợp với thông số nào. |
-| Thời điểm / bối cảnh | Khi đang cân nhắc giữa nhiều thiết bị có giá và thông số khác nhau trước khi mua. |
-| Quy trình hiện tại | 1. Xác định nhu cầu sử dụng. 2. Tìm 3 sản phẩm phù hợp ngân sách. 3. Đọc thông số kỹ thuật của từng sản phẩm. 4. Đối chiếu sự khác biệt giữa các thông số. 5. Đánh giá sản phẩm phù hợp nhất. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 — đọc thông số kỹ thuật, dự kiến mất 13 phút trong tổng số 35 phút. Cần đo lại. |
-| Impact | Người mua mất nhiều thời gian tìm hiểu, khó đánh giá sự khác biệt giữa các sản phẩm và có nguy cơ mua thiết bị không phù hợp với nhu cầu. |
-| Success metric (baseline → target) | Thời gian so sánh 3 sản phẩm: 35 phút → mục tiêu đề xuất 20 phút, đồng thời xác định đúng những thông số liên quan đến nhu cầu sử dụng. |
-| Phương án không dùng AI | Tạo bảng so sánh các thông số quan trọng như CPU, RAM, bộ nhớ, pin và giá; loại bỏ các thông số không liên quan đến nhu cầu. |
-| Giả thuyết về AI | AI có thể giúp giải thích thuật ngữ kỹ thuật và tổng hợp sự khác biệt. Các thông số phải được kiểm tra lại từ nguồn chính thức. |
-| Cảm nhận nhanh | Workflow — có thể bắt đầu bằng bảng so sánh thủ công. |
+| Job Story | Khi tìm vị trí thực tập, tôi muốn xác định các công việc phù hợp với kỹ năng hiện tại, để không mất thời gian đọc những tin tuyển dụng không đáp ứng điều kiện. |
+| Actor | Sinh viên năm cuối, sinh viên mới tốt nghiệp và người chưa có kinh nghiệm làm việc đang tìm kiếm cơ hội thực tập. |
+| Thời điểm / bối cảnh | Khi sinh viên bắt đầu tìm kiếm cơ hội thực tập trên các trang tuyển dụng nhưng chưa biết vị trí nào phù hợp với kỹ năng và kiến thức hiện tại. |
+| Quy trình hiện tại (3–7 bước) | 1. Truy cập các trang tuyển dụng. 2. Tìm kiếm vị trí thực tập theo ngành nghề. 3. Mở và đọc yêu cầu của từng tin tuyển dụng. 4. Đối chiếu yêu cầu với kỹ năng hiện tại. 5. Lưu lại những vị trí phù hợp để cân nhắc ứng tuyển. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 và 4 — đọc yêu cầu công việc và đối chiếu với kỹ năng bản thân. Tổng thời gian tìm kiếm và đối chiếu 20 tin là 30 phút; cần đo riêng thời gian của từng bước để xác định bottleneck chính. |
+| Impact (nếu không giải thì sao) | Sinh viên mất nhiều thời gian đọc những tin tuyển dụng không phù hợp, dễ bỏ lỡ các cơ hội thực tập phù hợp và khó tập trung chuẩn bị hồ sơ ứng tuyển. |
+| Success metric (baseline → target) | Giảm thời gian sàng lọc 20 tin tuyển dụng từ 30 phút xuống còn 15 phút, đồng thời đảm bảo không bỏ sót những vị trí phù hợp với kỹ năng hiện tại. |
+| Phương án không dùng AI | Sử dụng bộ lọc theo ngành nghề, vị trí, kinh nghiệm trên các trang tuyển dụng. Tạo danh sách kỹ năng hiện có và checklist điều kiện để kiểm tra từng tin. |
+| Giả thuyết về AI (nếu có) | AI có thể đọc nội dung tuyển dụng, trích xuất yêu cầu về kỹ năng, so sánh với hồ sơ kỹ năng người tìm việc và gợi ý các vị trí phù hợp. Người dùng cần kiểm tra lại trước khi ứng tuyển. |
+| Cảm nhận nhanh | Workflow — có thể kết hợp bộ lọc và AI để hỗ trợ sàng lọc, nhưng cần thử phương án thủ công trước. |
 
 **Quy trình nháp hiện tại:**
 
 ```text
-B1. Xác định nhu cầu — 4 phút
-                  |
-                  v
-B2. Tìm 3 sản phẩm — 5 phút
-                  |
-                  v
-B3.(BOTTLENECK) Đọc thông số — 13 phút
-                  |
-                  v
-B4. Đối chiếu thông số — 10 phút
-                  |
-                  v
-B5. Đánh giá lựa chọn — 3 phút
+B1. Truy cập trang tuyển dụng
+                 |
+                 v
+B2. Tìm vị trí thực tập
+                 |
+                 v
+B3. Đọc 20 tin tuyển dụng
+                 |
+                 v
+B4(BOTTLENEC). Đối chiếu yêu cầu với kỹ năng
+                 |
+                 v
+B5. Lưu các vị trí phù hợp
 
-Tổng: 35 phút/lần
+Tổng thời gian: 30 phút
+Thời gian từng bước: cần đo thêm
 ```
 
-*Các mốc thời gian từng bước là ước tính phân bổ, cần xác nhận theo trải nghiệm thực tế.*
+---
 
-### Problem Card #3 — So sánh giá giữa nhiều cửa hàng
+### Problem Card #3— Quản lý bài tập và thời hạn nộp 
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi muốn mua một sản phẩm được bán trên nhiều sàn thương mại điện tử, tôi muốn so sánh giá bán thực tế giữa các cửa hàng, để lựa chọn nơi mua phù hợp với ngân sách. |
-| Actor | Người mua hàng trực tuyến, đặc biệt là sinh viên có ngân sách hạn chế. |
-| Thời điểm / bối cảnh | Khi đã xác định được sản phẩm muốn mua và cần lựa chọn cửa hàng có giá phù hợp. |
-| Quy trình hiện tại | 1. Xác định đúng mẫu sản phẩm. 2. Tìm sản phẩm tại 3 cửa hàng. 3. Ghi nhận giá bán tại từng cửa hàng. 4. Đối chiếu giá và điều kiện bán hàng. 5. Chọn cửa hàng phù hợp. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 — tìm đúng sản phẩm ở nhiều cửa hàng, dự kiến mất 7 phút trong tổng số 15 phút. Cần đo lại. |
-| Impact | Người mua mất thời gian tìm kiếm, có nguy cơ bỏ qua cửa hàng có mức giá tốt hơn hoặc so sánh nhầm các phiên bản sản phẩm. |
-| Success metric (baseline → target) | Thời gian so sánh giá tại 3 cửa hàng: 15 phút → mục tiêu đề xuất 8 phút, đồng thời đảm bảo so sánh đúng mẫu sản phẩm. |
-| Phương án không dùng AI | Sử dụng chức năng tìm kiếm và bộ lọc của sàn thương mại điện tử, lập bảng ghi giá và đường dẫn sản phẩm từ từng cửa hàng. |
-| Giả thuyết về AI | AI có thể hỗ trợ đối chiếu thông tin sản phẩm và trình bày bảng giá nếu có dữ liệu cập nhật, nhưng không nên tự đưa ra giá khi chưa kiểm chứng. |
-| Cảm nhận nhanh | Rule / No AI — ưu tiên phương pháp so sánh giá có sẵn trước khi cân nhắc AI. |
+| Job Story | Khi có nhiều bài tập và hạn nộp từ các môn hoặc hoạt động khác nhau, tôi muốn nắm được thời hạn của từng việc, để sắp xếp thời gian và tránh nộp muộn. |
+| Actor | Sinh viên tham gia nhiều môn học, khóa đào tạo hoặc hoạt động có thời hạn nộp bài khác nhau. |
+| Thời điểm / bối cảnh | Khi sinh viên nhận nhiều bài tập, thông báo và deadline từ LMS, email, nhóm lớp hoặc các nền tảng học tập khác nhau. |
+| Quy trình hiện tại (3–7 bước) | 1. Nhận thông báo bài tập từ các nguồn. 2. Kiểm tra nội dung và thời hạn từng bài. 3. Ghi lại deadline vào lịch hoặc ghi chú. 4. Sắp xếp thứ tự ưu tiên. 5. Kiểm tra lại các deadline trong quá trình làm bài. 6. Hoàn thành và nộp bài trước thời hạn. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 và 5 — phải kiểm tra nhiều nguồn thông báo và thường xuyên xem lại deadline. Cần đo thời gian thực tế |
+| Impact (nếu không giải thì sao) | Sinh viên có thể quên deadline, phân bổ thời gian không hợp lý, phải hoàn thành bài gấp hoặc nộp muộn, ảnh hưởng đến kết quả học tập. |
+| Success metric (baseline → target) | Số bài nộp muộn mỗi tháng: [cần đo] → mục tiêu 0 bài. Thời gian kiểm tra và tổng hợp deadline mỗi tuần: [cần đo] → mục tiêu giảm ít nhất 50% so với hiện tại. |
+| Phương án không dùng AI | Sử dụng Google Calendar, ứng dụng ghi chú hoặc bảng checklist để tổng hợp deadline. Đặt thông báo nhắc trước 1–2 ngày và đánh dấu những bài đã hoàn thành. |
+| Giả thuyết về AI  | AI có thể hỗ trợ trích xuất tên bài tập và thời hạn từ thông báo, sau đó đề xuất lịch học. Người dùng phải kiểm tra thông tin trước khi lưu; chức năng nhắc deadline có thể thực hiện bằng quy tắc thông thường. |
+| Cảm nhận nhanh | Rule / Workflow — chưa cần AI nếu việc ghi deadline và nhắc lịch thông thường đã đáp ứng nhu cầu. |
 
 **Quy trình nháp hiện tại:**
 
 ```text
-B1. Xác định mẫu sản phẩm — 2 phút
-                  |
-                  v
-B2.(BOTTLENECK) Tìm tại 3 cửa hàng — 7 phút
-                  |
-                  v
-B3. Ghi nhận giá bán — 2 phút
-                  |
-                  v
-B4. Đối chiếu giá — 3 phút
-                  |
-                  v
-B5. Lựa chọn cửa hàng — 1 phút
+B1. Nhận thông báo bài tập
+                 |
+                 v
+B2. Kiểm tra deadline từng nguồn
+                 |
+                 v
+B3. Ghi deadline vào lịch
+                 |
+                 v
+B4. Sắp xếp thứ tự ưu tiên
+                 |
+                 v
+B5.(BOTTLENECK) Kiểm tra lại deadline
+                 |
+                 v
+B6. Hoàn thành và nộp bài
 
-Tổng: 15 phút/lần
-``` 
-
-*Các mốc thời gian từng bước là ước tính phân bổ, cần đo lại.*
+Thời gian mỗi bước: cần đo
+Tổng thời gian kiểm tra: cần đo
+```
 
 ### Card muốn pitch nhất
 
