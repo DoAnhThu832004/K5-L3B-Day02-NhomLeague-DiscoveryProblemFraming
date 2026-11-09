@@ -318,12 +318,12 @@ Quy trình nhập hàng đã có các bước xác định trước và không y
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | AI hỗ trợ dự báo nhu cầu bán hàng theo từng SKU (mẫu, màu, size), xác định SKU có nguy cơ hết hàng hoặc tồn kho lâu và tạo bảng đề xuất số lượng nhập thêm ở trạng thái [DRAFT], kèm lý do. |
-| **Judgment** — con người cân nhắc, quyết định gì? | Chủ shop xem xét số lượng tồn thực tế, tốc độ bán, ngân sách, xu hướng thị trường, chương trình khuyến mãi và khả năng giao hàng của nhà cung cấp. Chủ shop quyết định giữ, sửa hoặc từ chối đề xuất của AI. |
-| **Action** — hành động cuối cùng là gì, ai làm? | Sau khi chủ shop phê duyệt số lượng, hệ thống Rule tạo phiếu đặt hàng PO và tính tổng chi phí. Chủ shop kiểm tra lần cuối, gửi đơn qua Zalo và xác nhận với nhà cung cấp. AI không tự gửi đơn hoặc thanh toán. |
-| **Outcome** — đo kết quả bằng gì? | Thời gian lập danh sách nhập hàng giảm từ baseline 55 phút xuống dưới 20 phút/tuần. Theo dõi thêm tỷ lệ SKU tồn đọng sau 30 ngày, tỷ lệ thiếu hàng và mức sai lệch giữa số lượng đề xuất với nhu cầu thực tế. |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Dữ liệu tồn kho theo SKU, lịch sử bán hàng, số lượng đổi trả, giá nhập, thời gian giao hàng, thông tin khuyến mãi và ngân sách nhập hàng. Báo cáo nhóm đã xác định POS/Sheets và lịch sử bán hàng là các nguồn dự kiến. Cần kiểm tra khả năng xuất dữ liệu và độ đầy đủ của lịch sử trước khi dùng ML. |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Lưu bản đề xuất [DRAFT], số lượng chủ shop chỉnh sửa, số lượng thực tế đã nhập, doanh số sau nhập, số SKU hết hàng và hàng tồn sau 30 ngày. Dùng dữ liệu này để đánh giá sai lệch và cải thiện quy tắc hoặc mô hình dự báo. |
+| **Prediction** - AI dự đoán / tạo ra gì? | AI hỗ trợ dự báo nhu cầu bán hàng theo từng SKU (mẫu, màu, size), xác định SKU có nguy cơ hết hàng hoặc tồn kho lâu và tạo bảng đề xuất số lượng nhập thêm ở trạng thái [DRAFT], kèm lý do. |
+| **Judgment** - con người cân nhắc, quyết định gì? | Chủ shop xem xét số lượng tồn thực tế, tốc độ bán, ngân sách, xu hướng thị trường, chương trình khuyến mãi và khả năng giao hàng của nhà cung cấp. Chủ shop quyết định giữ, sửa hoặc từ chối đề xuất của AI. |
+| **Action** - hành động cuối cùng là gì, ai làm? | Sau khi chủ shop phê duyệt số lượng, hệ thống Rule tạo phiếu đặt hàng PO và tính tổng chi phí. Chủ shop kiểm tra lần cuối, gửi đơn qua Zalo và xác nhận với nhà cung cấp. AI không tự gửi đơn hoặc thanh toán. |
+| **Outcome** - đo kết quả bằng gì? | Thời gian lập danh sách nhập hàng giảm từ baseline 55 phút xuống dưới 20 phút/tuần. Theo dõi thêm tỷ lệ SKU tồn đọng sau 30 ngày, tỷ lệ thiếu hàng và mức sai lệch giữa số lượng đề xuất với nhu cầu thực tế. |
+| **Input** - AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Dữ liệu tồn kho theo SKU, lịch sử bán hàng, số lượng đổi trả, giá nhập, thời gian giao hàng, thông tin khuyến mãi và ngân sách nhập hàng. Báo cáo nhóm đã xác định POS/Sheets và lịch sử bán hàng là các nguồn dự kiến. Cần kiểm tra khả năng xuất dữ liệu và độ đầy đủ của lịch sử trước khi dùng ML. |
+| **Feedback** - lấy phản hồi ở đâu để cải thiện? | Lưu bản đề xuất [DRAFT], số lượng chủ shop chỉnh sửa, số lượng thực tế đã nhập, doanh số sau nhập, số SKU hết hàng và hàng tồn sau 30 ngày. Dùng dữ liệu này để đánh giá sai lệch và cải thiện quy tắc hoặc mô hình dự báo. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
