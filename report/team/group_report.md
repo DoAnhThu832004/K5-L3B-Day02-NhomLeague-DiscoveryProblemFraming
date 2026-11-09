@@ -5,7 +5,7 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: Nhóm League
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu):
 - Quyết định cuối: Go / Not Yet / No-Go
