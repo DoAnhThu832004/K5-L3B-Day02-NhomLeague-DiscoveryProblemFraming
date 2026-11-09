@@ -104,26 +104,35 @@ Giả định nhóm kiểm chứng trong buổi này:
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+**Cách đã dùng:** Phỏng vấn / Survey / Log bán hàng, tồn kho
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+### Interview snapshot
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi (vai trò, không ghi tên thật) | Chủ cửa hàng kinh doanh quần áo hoặc nhân viên phụ trách quản lý kho và nhập hàng. |
+| Câu nói đáng nhớ nhất (nguyên văn) | Mỗi lần chuẩn bị nhập hàng, tôi phải kiểm tra từng mẫu quần áo, màu sắc và kích cỡ, rồi đối chiếu với số lượng đã bán để quyết định nhập thêm. |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Kiểm tra tồn kho nhiều mẫu, màu sắc và kích cỡ trước khi đặt hàng. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Theo quy trình đang được giả định: kiểm tra số lượng hàng còn trong kho, hỏi nhân viên, xem các mặt hàng bán gần đây, đối chiếu với tồn kho rồi tự ước lượng số lượng cần nhập. Cần xác nhận người được hỏi có thực sự làm theo cách này không. |
+| Mất bao lâu, bao lần? | Giả thuyết ban đầu: khoảng 30–60 phút cho mỗi lần kiểm tra và lập danh sách nhập hàng. Cần phỏng vấn để xác nhận thời gian thực tế, số lần thực hiện mỗi tuần và bước mất thời gian nhất. |
+| Insight / opportunity rút ra | **Giả thuyết cần kiểm chứng:** Khó khăn có thể không nằm ở việc đặt hàng mà ở việc tổng hợp và đối chiếu dữ liệu tồn kho với số lượng bán theo từng mẫu, màu sắc và kích cỡ. Nếu dữ liệu được ghi nhận đầy đủ và dễ tra cứu, chủ cửa hàng có thể đưa ra quyết định nhập hàng nhanh hơn. |
 
-Tổng hợp:
+### Tổng hợp
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn chủ cửa hàng | 2 | Cần kiểm tra xem chủ cửa hàng có thường xuyên mất thời gian đối chiếu hàng tồn với lượng bán, hoặc từng nhập thừa/thiếu hàng hay không. | Nếu chủ cửa hàng đã có hệ thống quản lý hiệu quả và không gặp khó khăn đáng kể khi nhập hàng thì giả thuyết bị suy yếu. |
+| Phỏng vấn nhân viên quản lý kho / bán hàng | 3 | Cần kiểm tra xem nhân viên có phải kiểm đếm hoặc đối chiếu số lượng của nhiều mẫu, màu và kích cỡ theo cách thủ công hay không. | Nếu dữ liệu tồn kho luôn chính xác, dễ truy xuất và không gây chậm trễ thì vấn đề có thể không nghiêm trọng. |
+| Log bán hàng, tồn kho (nếu được cung cấp) | 5 | Kiểm tra có trường hợp hàng bán chạy bị hết hoặc hàng bán chậm tồn nhiều hay không. | Nếu hàng tồn được kiểm soát tốt và ít xảy ra tình trạng nhập thiếu hoặc thừa thì chưa có bằng chứng về tác động lớn của vấn đề. |
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+### Nhóm đã sửa problem thế nào sau kiểm chứng
+
+**Hướng điều chỉnh đề xuất sau khi có kết quả kiểm chứng:**
+
+- Problem ban đầu tập trung vào việc xác định mặt hàng nào còn tồn nhiều, mặt hàng nào bán chạy và cần nhập thêm.
+
+- Nếu phỏng vấn xác nhận điểm nghẽn chính nằm ở việc kiểm tra và đối chiếu dữ liệu, nhóm có thể thu hẹp Problem Statement:
+Khi chuẩn bị nhập hàng mới, chủ cửa hàng quần áo gặp khó khăn trong việc tổng hợp và đối chiếu số lượng tồn kho với tốc độ bán theo từng mẫu, màu sắc và kích cỡ. Việc này có thể mất nhiều thời gian và làm tăng nguy cơ nhập thiếu hàng bán chạy hoặc nhập thừa hàng bán chậm.
 
 ### 3.3. Research giải pháp đã có
 
