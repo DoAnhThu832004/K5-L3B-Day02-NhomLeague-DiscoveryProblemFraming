@@ -133,11 +133,16 @@ Thu hẹp từ bài toán "dự đoán nhập hàng chung chung" thành **"tổn
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| **Square for Retail — Quản lý tồn kho và thống kê bán hàng** | https://squareup.com/help/us/en/article/7809-sell-through-report-with-square-for-retail | **Bước 2–4:** Theo dõi số lượng tồn kho, tốc độ bán và đối chiếu hàng còn lại với số lượng đã bán. | Có báo cáo tốc độ bán, tỷ lệ hàng bán được và tồn kho; hỗ trợ theo dõi các biến thể sản phẩm, giúp nhận biết hàng bán nhanh hoặc bán chậm. | Một số báo cáo yêu cầu gói trả phí. Phụ thuộc vào dữ liệu bán hàng được cập nhật chính xác. Khả năng áp dụng cho cửa hàng tại Việt Nam cần kiểm tra thêm. | Cần xây dựng dữ liệu tồn kho và lịch sử bán hàng rõ ràng theo từng mẫu, màu sắc, kích cỡ trước khi nghĩ đến dự báo bằng AI. |
+| **Zoho Inventory — Cảnh báo hàng tồn kho thấp (Rule-based)** | https://www.zoho.com/us/inventory/kb/items/item-reorder-notification.html | **Bước 2, 4 và 5:** Theo dõi tồn kho, phát hiện sản phẩm sắp hết và hỗ trợ xác định mặt hàng cần nhập thêm. | Cho phép thiết lập ngưỡng tồn kho tối thiểu và gửi thông báo khi số lượng hàng xuống thấp. Giúp giảm việc phải kiểm tra thủ công thường xuyên. | Ngưỡng cảnh báo cần được thiết lập phù hợp. Nếu nhu cầu bán thay đổi theo mùa hoặc xu hướng thời trang, ngưỡng cố định có thể dẫn đến nhập thiếu hoặc thừa hàng. | Nên ưu tiên các quy tắc đơn giản như cảnh báo tồn kho thấp trước. Không phải chức năng nào cũng cần sử dụng AI. |
+| **Inventory Planner — Dự báo nhu cầu và đề xuất nhập hàng** | https://help.inventory-planner.com/en/articles/589017-replenishment | **Bước 3–6:** Phân tích lịch sử bán hàng, dự báo nhu cầu, đối chiếu tồn kho và đề xuất số lượng cần nhập. | Có thể dự báo theo xu hướng bán hàng, yếu tố mùa vụ và thông tin tồn kho. Đề xuất số lượng nhập cho từng biến thể sản phẩm, có tính đến thời gian giao hàng từ nhà cung cấp. | Cần dữ liệu bán hàng và tồn kho đủ chính xác. Dự báo có thể kém tin cậy đối với mẫu quần áo mới, ít dữ liệu hoặc xu hướng thay đổi đột ngột. Việc cấu hình có thể phức tạp với cửa hàng nhỏ. | Nếu muốn ứng dụng AI/ML, nhóm cần kiểm tra chất lượng dữ liệu lịch sử trước. Nên xây dựng hệ thống quản lý kho cơ bản rồi mới thử nghiệm chức năng dự báo nhu cầu. |
 
----
+**Nhận xét sau khi nghiên cứu:**
+
+Đối với cửa hàng quần áo, khó khăn đáng quan tâm là số lượng biến thể sản phẩm theo mẫu, màu sắc và kích cỡ. Vì vậy, nhóm nên ưu tiên xây dựng dữ liệu tồn kho chính xác, dễ tra cứu và có khả năng đối chiếu với lịch sử bán hàng.
+
+Sau khi có đủ dữ liệu, nhóm có thể xem xét sử dụng Machine Learning để dự báo nhu cầu và đề xuất số lượng nhập hàng. Tuy nhiên, cần so sánh hiệu quả với phương pháp dựa trên quy tắc trước khi quyết định triển khai AI.
+
 
 ## 4. Quy trình trước/sau (CP5)
 
