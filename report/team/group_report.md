@@ -61,21 +61,27 @@ Những ý không đưa vào tầng Opportunity vì là giải pháp:
 2. Tạo công cụ AI tự động kiểm tra assignment.
 3. Xây AI Tutor tự động đánh giá kiến thức của học viên.
 
+
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| #1 – Quản lý tồn kho | 5 | 5 | 3 | 5 | 5 | 5 | 4 | 32 |
+| #6 – Tổng hợp nhiệm vụ và deadline | 5 | 4 | 2 | 4 | 5 | 4 | 4 | 28 |
+| #12 – Phân loại phản ánh khách hàng | 5 | 5 | 3 | 4 | 4 | 5 | 3 | 28 |
 
-**Candidate được chọn:**
+**Candidate được chọn:** #1 – Quản lý tồn kho và hỗ trợ quyết định nhập hàng.
 
-**Vì sao chọn:**
+**Vì sao chọn:** Candidate #1 có actor rõ ràng là chủ cửa hàng và nhân viên quản lý kho. Vấn đề xuất hiện khi cần kiểm tra số lượng hàng tồn theo mẫu, màu sắc và kích cỡ, sau đó đối chiếu với tình hình bán hàng để quyết định nhập thêm. Quy trình có thể mô tả rõ, thời gian xử lý có thể đo được và kết quả cải thiện có thể đánh giá qua thời gian lập danh sách nhập hàng, số lần thiếu hàng và lượng tồn kho. Ngoài ra, nhóm có thể so sánh các phương án từ kiểm tra thủ công, cảnh báo Min/Max đến dự báo nhu cầu bằng Machine Learning để xác định mức can thiệp phù hợp.
 
 **Vì sao loại các candidate còn lại:**
 
-**Xử lý bất đồng (nếu có):**
+1. **Candidate #6 – Tổng hợp nhiệm vụ và deadline:** Vấn đề có tính thực tế và dễ triển khai, nhưng có thể được giải quyết phần lớn bằng các công cụ quản lý công việc hoặc lịch nhắc hạn hiện có. Nhóm cần thêm bằng chứng để xác định phần khó khăn mà các công cụ thông thường chưa giải quyết được.
+
+2. **Candidate #12 – Phân loại phản ánh khách hàng:** Đây là vấn đề có tiềm năng ứng dụng AI, đặc biệt với những tin nhắn sử dụng ngôn ngữ không chuẩn hoặc viết tắt. Tuy nhiên, việc kiểm chứng cần có dữ liệu tin nhắn thực tế, tiêu chí phân loại rõ ràng và cách đánh giá mức độ khẩn cấp. Nhóm đánh giá phạm vi này khó kiểm chứng hơn trong thời gian lab.
+
+**Xử lý bất đồng (nếu có):** Nhóm cần ghi lại các ý kiến khác nhau trong quá trình chấm điểm và lý do thống nhất chọn Candidate #1.
+
 
 ---
 
