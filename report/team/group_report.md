@@ -90,17 +90,14 @@ Những ý không đưa vào tầng Opportunity vì là giải pháp:
 ### 3.1. Assumption Map
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
-|---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+|---:|---|---|---:|---:|:---:|
+| 1 | Người bán thời trang/chủ shop mất nhiều thời gian (trên 45 phút/lần) đối chiếu thủ công tồn kho chi tiết (màu/size) với tốc độ bán để quyết định nhập hàng | Value | 5 | 2 | ✅ |
+| 2 | Chủ shop sẵn sàng nhập hàng theo số lượng do máy tính/hệ thống tự động đề xuất thay vì dựa vào kinh nghiệm và linh cảm | Value | 5 | 1 | ✅ |
+| 3 | Ngưỡng tồn kho tĩnh (Min/Max cố định) trên các phần mềm POS/Excel hiện nay không đủ linh hoạt để xử lý biến động tiêu thụ giữa các mã hàng | Value | 4 | 2 | ✅ |
+| 4 | Dữ liệu lịch sử giao dịch và biến động tồn kho chi tiết theo từng SKU (màu/size) có thể xuất được từ Excel hoặc POS phổ biến (KiotViet, Sapo, Shopee) | Feasibility | 4 | 4 | — |
+| 5 | Người dùng có thể dễ dàng hiểu lý do gợi ý (tốc độ bán, ngày tồn) và chỉnh sửa số lượng trên bản đề xuất nháp [DRAFT] trong dưới 15 phút | Usability | 4 | 2 | — |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: **Giả định #1, #2 và #3** (đã được đưa vào kiểm chứng thực tế tại Mục 3.2 thông qua phỏng vấn The Mom Test và poll nhanh).
 
 ### 3.2. Kiểm chứng
 
