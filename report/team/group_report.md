@@ -364,29 +364,44 @@ Tuy nhiên, nhóm vẫn phải theo dõi cả tỷ lệ thiếu hàng để trá
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Chủ cửa hàng thời trang bán lẻ hoặc kinh doanh quần áo online quy mô nhỏ và vừa, quản lý từ 30–50 mã sản phẩm trở lên với nhiều màu sắc và kích cỡ. Tập trung vào các mặt hàng cơ bản có lịch sử bán tương đối ổn định. |
+| **Quy trình** | Mỗi tuần, chủ shop kiểm tra tồn kho theo từng SKU (mẫu, màu, size), tổng hợp số bán trong 7 ngày, đối chiếu tốc độ tiêu thụ, xác định số lượng cần nhập và gửi đơn cho nhà cung cấp. Quy trình hiện tại gồm 5 bước thủ công, mất khoảng 55 phút. Quy trình tương lai: Rule tổng hợp dữ liệu → AI đề xuất nhập hàng → chủ shop kiểm tra, phê duyệt → Rule tạo phiếu đặt hàng → chủ shop gửi đơn. |
+| **Bottleneck** | Bước 3 — đối chiếu tồn kho với tốc độ bán và tính số lượng cần nhập theo từng SKU, mất **25/55 phút (khoảng 45%)**. Chủ shop phải xử lý nhiều biến thể màu sắc, kích cỡ bằng phương pháp thủ công và kinh nghiệm nên dễ tính toán sai. |
+| **Impact** | Việc kiểm tra thủ công gây mất thời gian, dễ dẫn đến nhập thiếu hàng bán chạy hoặc nhập thừa hàng bán chậm, làm mất doanh thu và đọng vốn. Một trường hợp được phỏng vấn ghi nhận nhập 100 áo polo nhưng còn tồn 40 chiếc thuộc các màu và size khó bán, phải giảm giá 50% để thu hồi vốn. Đây là trường hợp cụ thể, chưa đại diện cho mọi cửa hàng. |
+| **Success Metric (baseline → target, cách đo)** | **1. Thời gian:** 55 phút/tuần → mục tiêu dưới 20 phút/tuần; quy trình mới kỳ vọng khoảng 16 phút. Đo bằng cách bấm giờ trong 4 tuần thử nghiệm. **2. Tồn kho:** Mục tiêu tỷ lệ hàng khó bán dưới 15% sau 30 ngày, đo bằng kiểm kê và đối chiếu số lượng tồn theo cùng nhóm sản phẩm. Baseline chung cần đo thêm vì số liệu 40/100 áo chỉ thuộc một trường hợp. **3. Thiếu hàng:** Theo dõi số SKU hết hàng khi vẫn có nhu cầu. **4. An toàn:** 100% đơn nhập phải được chủ shop phê duyệt trước khi gửi. |
+| **Boundary** | AI chỉ phân tích dữ liệu và đưa ra bản đề xuất nhập hàng, không được tự gửi đơn qua Zalo, thanh toán hoặc chỉnh sửa dữ liệu tồn kho thực tế. Chủ shop có quyền kiểm tra, sửa hoặc từ chối đề xuất. Không dùng AI dự báo hàng hot trend thiếu dữ liệu. Khi AI gặp lỗi hoặc dự báo bất thường, hệ thống cảnh báo và chuyển về Rule-based (Min/Max) hoặc thao tác thủ công. |
+| **AI intervention point** | AI tham gia ở **Bước 2 của quy trình tương lai**, sau khi Rule/Script đã tổng hợp tồn kho, doanh số và tốc độ bán. AI đánh giá nguy cơ thiếu hàng, tồn kho lâu và đề xuất số lượng nhập. Dữ liệu từ Flash Sale hoặc khuyến mãi bất thường cần được nhận diện, xử lý riêng để tránh dự báo nhu cầu quá cao. Các đề xuất phải có lý do để chủ shop đối chiếu. |
+| **Mức chọn** | **Workflow (Rule + AI + Human-in-the-loop).** Rule/Script tổng hợp dữ liệu, tính tốc độ bán và tạo phiếu đặt hàng; AI hỗ trợ dự báo nhu cầu; chủ shop kiểm tra và phê duyệt. Không chọn Agent vì quy trình có các bước cố định và liên quan đến quyết định tài chính. Chỉ duy trì AI nếu kiểm thử chứng minh hiệu quả tốt hơn Rule-based. |
+| **Rủi ro & người kiểm tra** | **Rủi ro:** Dữ liệu tồn kho sai, thiếu lịch sử bán, doanh số tăng bất thường do khuyến mãi, AI đề xuất nhập dư hoặc bỏ sót hàng sắp hết. **Người kiểm tra:** Nhân viên kho kiểm tra dữ liệu; chủ shop đối chiếu đề xuất với ngân sách và quyết định số lượng nhập. Nếu AI không đáng tin cậy, chuyển về Rule-based hoặc quyết định thủ công. |
 
-**Thay đổi so với v0 và lý do:**
+### Thay đổi so với v0 và lý do
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| **Actor / Phạm vi** | Chủ cửa hàng thời trang nhỏ và vừa có nhiều mã sản phẩm. | Tập trung vào các mặt hàng cơ bản có lịch sử bán ổn định, không dự báo hàng hot trend thiếu dữ liệu. | Nhu cầu hàng thời trang biến động nhanh, sản phẩm mới có thể không đủ dữ liệu lịch sử để dự báo chính xác. |
+| **Quy trình / AI intervention** | Chủ shop đối chiếu tồn kho, tính số lượng nhập bằng phương pháp thủ công. | Rule tổng hợp dữ liệu → AI đề xuất → chủ shop phê duyệt → Rule tạo phiếu đặt hàng → chủ shop gửi đơn. | Research cho thấy phần quản lý tồn kho có thể dùng Rule; AI chỉ nên hỗ trợ dự báo khi cần. |
+| **Success Metric** | Thời gian dưới 20 phút/tuần; tỷ lệ hàng khó bán dưới 15% sau 30 ngày. | Giữ mục tiêu cũ, bổ sung kỳ vọng 16 phút/tuần, theo dõi thiếu hàng và yêu cầu 100% đơn được phê duyệt. | Cần đánh giá cả tốc độ, chất lượng và an toàn thay vì chỉ đo thời gian xử lý. |
+| **Dữ liệu đầu vào** | Chủ yếu dựa vào tồn kho và lịch sử bán trong 7 ngày. | Bổ sung nhận diện và xử lý riêng dữ liệu Flash Sale, khuyến mãi hoặc quảng cáo bất thường. | Doanh số tăng đột biến có thể khiến AI dự báo quá cao, gây nhập thừa hàng. |
+| **Rủi ro & kiểm soát** | Nhận diện rủi ro nhập thiếu, nhập thừa và tính toán theo cảm tính. | Bổ sung rủi ro dữ liệu thiếu/sai, khuyến mãi bất thường; phân rõ trách nhiệm kiểm tra của nhân viên kho và chủ shop. | Cần xác định người chịu trách nhiệm và cách xử lý khi dự báo không chính xác. |
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+### Tiêu chí đánh giá đầu ra của AI
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | **Tính chính xác của dữ liệu** | Mã SKU, màu sắc, kích cỡ, số lượng tồn, số bán và tốc độ bán khớp dữ liệu nguồn đã xác minh. | Nhầm sản phẩm, màu/size, tính sai hoặc tạo số liệu không có trong nguồn. |
+| 2 | **Chất lượng đề xuất nhập hàng** | Đề xuất dựa trên tồn kho, tốc độ bán và thời gian giao hàng; nhận diện được hàng sắp hết hoặc tồn lâu. Kết quả thử nghiệm được so sánh với Rule-based và nhu cầu thực tế. | Thường xuyên đề xuất nhập dư hàng bán chậm, bỏ sót hàng sắp hết hoặc cho kết quả kém Rule-based mà không có lý do. |
+| 3 | **Xử lý dữ liệu bất thường** | Phát hiện hoặc sử dụng được nhãn khuyến mãi, cảnh báo khi doanh số biến động mạnh hoặc thiếu lịch sử bán. | Coi doanh số Flash Sale là nhu cầu thường xuyên hoặc dự báo chắc chắn dù dữ liệu không đủ. |
+| 4 | **Khả năng giải thích và kiểm tra** | Đề xuất thể hiện SKU, số lượng tồn, tốc độ bán, số lượng nhập và lý do; chủ shop có thể chỉnh sửa hoặc từ chối. | Đưa ra số lượng nhập thiếu căn cứ, không giải thích được hoặc không cho phép điều chỉnh. |
+
+**Cách đánh giá khi thử nghiệm:**
+
+Nhóm sử dụng dữ liệu tồn kho và bán hàng có thể đối chiếu, gồm các trường hợp hàng bán ổn định, hàng tồn lâu, hàng sắp hết, sản phẩm mới và ngày khuyến mãi bất thường.
+
+Mỗi lần chạy, nhóm so sánh đề xuất AI với phương án Rule-based, nhận xét của chủ shop và kết quả bán thực tế. Đồng thời ghi nhận thời gian xử lý, số đề xuất phải chỉnh sửa, tình trạng thiếu hàng và tỷ lệ tồn khó bán.
+
+Nếu AI không cải thiện kết quả so với Rule-based hoặc không đáp ứng tiêu chí an toàn, nhóm sẽ ưu tiên sử dụng Rule-based.
+
+**Kết luận:** Nhóm lựa chọn Workflow để kiểm chứng khả năng hỗ trợ quyết định nhập hàng. AI chỉ đóng vai trò phân tích và đề xuất, còn chủ shop quyết định cuối cùng. Mục tiêu là giảm thời gian xử lý, hạn chế nhập thiếu hoặc thừa hàng và bảo đảm an toàn tài chính.
 
 ---
 
