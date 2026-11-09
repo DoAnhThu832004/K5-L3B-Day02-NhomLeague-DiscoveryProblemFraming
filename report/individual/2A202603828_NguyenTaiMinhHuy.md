@@ -23,7 +23,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
 | 1 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận một assignment có nhiều yêu cầu và tiêu chí chấm điểm, mình muốn hiểu rõ từng yêu cầu để hoàn thành bài đúng phạm vi và tránh bỏ sót nội dung quan trọng. | Học viên VinUni | Đã từng cần đọc lại và hỏi thêm về yêu cầu assignment đầu tiên.|
-| 2 | Tốn thời gian | Khi chương trình Python xuất hiện lỗi trong lúc làm assignment, mình muốn xác định chính xác nguyên nhân để sửa lỗi và tiếp tục làm bài mà không phải thử nhiều cách không hiệu quả. | Học viên học Python | Đã có trường hợp debug Python kéo dài trên 30 phút ở trên assignment đầu tiên của Lab. |
+| 2 | Tốn thời gian | Khi chương trình Python xuất hiện lỗi trong lúc làm assignment, mình muốn xác định chính xác nguyên nhân để sửa lỗi và tiếp tục làm bài mà không phải thử nhiều cách không hiệu quả. | Học viên học các ngôn ngữ | Đã có trường hợp debug Python kéo dài trên 30 phút ở trên assignment đầu tiên của Lab. |
 | 3 | Cần đọc, tổng hợp nhiều thông tin | Khi học một khái niệm AI/ML có nhiều công thức hoặc thuật ngữ khó, mình muốn hiểu rõ nguyên lý và cách áp dụng thực tế để giải bài thay vì chỉ ghi nhớ lý thuyết. | Học viên AI/ML | Đã từng phải hỏi lại và yêu cầu giải thích thêm các khái niệm AI/ML thông qua việc hỏi Thầy trên lớp hoặc AI để giải thích lại khái niệm. |
 | 4 | Lặp lại | Khi chuẩn bị nộp assignment, mình muốn đối chiếu bài làm với rubric và hướng dẫn để phát hiện những phần còn thiếu hoặc chưa chính xác trước khi nộp. | Học viên VinUni | Đã từng phải kiểm tra lại các yêu cầu nộp bài, compare tới các đồng đội và hỏi lại coach lab. |
 | 5 | Lặp lại / Pain từ người khác | Khi thực hiện assignment nhóm trên GitHub, mình muốn theo dõi nhiệm vụ và thay đổi của từng thành viên để phối hợp đúng tiến độ và tránh xung đột khi cập nhật bài. | Thành viên nhóm assignment | Kiểm tra tiến độ của từng thành viên trong buổi lecture. |
@@ -57,7 +57,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Trường | Nội dung |
 |---|---|
 | Job Story | Khi chương trình Python xuất hiện lỗi trong lúc làm assignment, mình muốn xác định chính xác nguyên nhân để sửa lỗi và tiếp tục làm bài mà không phải thử nhiều cách không hiệu quả. |
-| Actor | Học viên chương trình AI Thực chiến Level 3 tại VinUni đang làm bài tập Python. |
+| Actor | Học viên học các loại ngôn ngữ lập trình. |
 | Thời điểm / bối cảnh | Trong quá trình thực hiện assignment Python, khi chương trình xuất hiện thông báo lỗi hoặc không hoạt động đúng như mong đợi. |
 | Quy trình hiện tại (3–7 bước) | 1. Viết code Python theo yêu cầu assignment. 2. Chạy chương trình và đọc thông báo lỗi. 3. Tìm nguyên nhân gây lỗi thông qua code và tài liệu. 4. Chỉnh sửa phần code gây lỗi. 5. Chạy lại chương trình và kiểm tra kết quả. |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3. Việc xác định nguyên nhân lỗi tốn nhiều thời gian vì cần hiểu thông báo lỗi và tìm đúng vị trí trong code. Đã có trường hợp quá trình debug kéo dài trên 30 phút. |
