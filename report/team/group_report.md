@@ -214,18 +214,42 @@ Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — 5 bước, khoảng 16 phút/tuần, 2/5 bước thủ công
 
+[1. Tự động xuất tồn kho & tính run-rate 7 ngày: 2']  ← RULE (Script / tích hợp POS)
+→ [2. Đánh giá nguy cơ & tạo đề xuất nhập nháp: 1']     ← AI (Dự báo nhu cầu & giải thích)
+→ [3. Chủ shop kiểm tra & duyệt bản nháp [DRAFT]: 10']  ← CON NGƯỜI (Kiểm soát chất lượng - HITL)
+→ [4. Tự động sinh phiếu đặt hàng PO: 1']               ← RULE (Format & tính tổng tiền)
+→ [5. Chủ shop gửi đơn qua Zalo và chốt với xưởng: 2']  ← CON NGƯỜI (Handoff)
+
+BOUNDARY:
+- AI KHÔNG tự ý gửi đơn đặt hàng hoặc thực hiện thanh toán cho nhà cung cấp.
+- AI KHÔNG tự ý thay đổi số liệu tồn kho thật trong hệ thống POS.
+- Toàn bộ kết quả AI sinh ra bắt buộc ở trạng thái [DRAFT - BẢN NHÁP] và cần con người duyệt trước khi chuyển bước tiếp theo.
+- AI chỉ phân tích trên nhóm hàng cơ bản (basic items) có lịch sử tiêu thụ ổn định; không dự đoán hàng hot trend ngắn ngày.
+
+PHƯƠNG ÁN QUAY VỀ (FALLBACK):
+- Khi AI gặp sự cố (lỗi mạng, hallucinate ra số lượng bất thường): Hệ thống tự động chuyển về chế độ Rule-based thuần túy (áp dụng ngưỡng Min/Max tĩnh theo công thức: Tồn an toàn = Tốc độ bán 7 ngày x Thời gian xưởng giao 5 ngày).
+- Nếu bản nháp do AI đề xuất không thỏa đáng: Chủ shop bấm "Bỏ nháp AI", giao diện giữ nguyên số liệu tồn và số bán của Bước 1 để chủ shop tự nhập tay số lượng mong muốn mà không làm gián đoạn việc đặt hàng.
 ```
+
+| Bước | Tên bước | Phân loại | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+|---:|---|---|---|---|---|---|---|
+| 1 | Đồng bộ số liệu & tính run-rate | **RULE** | Script / Hệ thống | Dữ liệu tồn kho POS + Lịch sử đơn hàng 7 ngày | Bảng run-rate chuẩn hóa: Tồn kho, tốc độ bán/ngày, số ngày còn hàng | 2 phút / 1 lần mỗi tuần | Tự động hóa bằng công thức/script, không cần AI |
+| 2 | Dự báo nguy cơ & tạo đề xuất nhập nháp | **AI** | Hệ thống AI | Bảng run-rate (Bước 1) + Lead time xưởng (3–5 ngày) | Bảng đề xuất số lượng nhập nháp **[DRAFT]** kèm lý do giải thích | 1 phút / 1 lần mỗi tuần | AI phân tích biến động, cảnh báo SKU sắp cháy hàng và gợi ý số lượng tối ưu |
+| 3 | Kiểm tra, đối chiếu ngân sách & duyệt đơn | **CON NGƯỜI** | Chủ shop | Bản đề xuất [DRAFT] (Bước 2) + Ngân sách vốn thực tế | Danh sách số lượng chốt nhập cuối cùng | **10 phút / 1 lần mỗi tuần** | **Bước chốt chặn (HITL):** Chủ shop có toàn quyền sửa số lượng dựa trên tiền mặt hiện có |
+| 4 | Sinh phiếu PO & chuẩn hóa tin nhắn | **RULE** | Script / Hệ thống | Danh sách chốt nhập (Bước 3) + Bảng giá sỉ xưởng | File PO (Excel/PDF) và nội dung tin nhắn đặt hàng chuẩn | 1 phút / 1 lần mỗi tuần | Tự động nhân đơn giá, tính tổng tiền vốn và format sẵn tin nhắn |
+| 5 | Gửi đơn cho xưởng & xác nhận lịch giao | **CON NGƯỜI** | Chủ shop | Tin nhắn & File PO chuẩn (Bước 4) | Tin nhắn Zalo xác nhận đơn và hẹn ngày giao từ xưởng | 2 phút / 1 lần mỗi tuần | Con người trực tiếp giao dịch và giữ mối quan hệ với xưởng/nhà cung cấp |
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 bước | 5 bước | Giữ nguyên luồng 5 bước cốt lõi nhưng tự động hóa các khâu nặng tính toán |
+| Tổng thời gian | 55 phút | **khoảng 16 phút** | Tiết kiệm ~70% thời gian (~39 phút/lần lập danh sách nhập hàng) |
+| Số bước thủ công | 5/5 bước (100%) | **2/5 bước (40%)** | Chỉ còn bước Chủ shop duyệt bản nháp (Bước 3) và gửi chốt với xưởng (Bước 5) |
+| Bottleneck chính | Tính nhẩm tỷ lệ tồn/bán và ước lượng số nhập (25') | Chủ shop kiểm tra bản nháp và cân đối ngân sách tiền mặt (10') | Bottleneck mới ngắn hơn và có kiểm soát vì đóng vai trò chốt chặn chất lượng |
+| Rủi ro mới phát sinh | Đọng vốn do nhập lệch size/màu theo cảm tính | AI bịa số lượng bất thường (hallucination) hoặc mô hình dự báo sai lệch | Kiểm soát bằng: (1) Ranh giới [DRAFT] bắt buộc người duyệt, (2) Fallback về Rule Min/Max |
 
 ---
 
@@ -233,16 +257,21 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Chủ cửa hàng thời trang bán lẻ / người bán hàng thời trang online quy mô nhỏ và vừa (quản lý từ 30–50 mã sản phẩm trở lên, nhiều biến thể màu sắc và kích cỡ). |
+| **Quy trình** | Mỗi tuần một lần: Mở dữ liệu tồn kho trên POS/Sheets → Tổng hợp số lượng đã bán 7 ngày gần nhất → Đối chiếu tồn kho với tốc độ bán để tính số lượng cần nhập thêm → Soạn danh sách đặt hàng nháp và cân đối ngân sách → Gửi đơn cho xưởng/nhà cung cấp qua Zalo. |
+| **Bottleneck** | Bước đối chiếu tồn kho với tốc độ bán của từng biến thể màu/size và tính nhẩm số lượng cần nhập thêm (chiếm 25/55 phút) do phải tính toán thủ công tỷ lệ tiêu thụ cho hàng chục SKU và dễ bị chi phối bởi phán đoán cảm tính. |
+| **Impact** | Tiêu tốn trung bình ~55 phút mỗi tuần/lần lập danh sách nhập hàng (khoảng 45–60 phút theo phỏng vấn 3 người bán, Mục 3.2); cơ cấu tồn kho bị lệch nghiêm trọng: cháy hàng size phổ thông (M, L màu cơ bản) chỉ sau 1 tuần làm mất cơ hội doanh thu, trong khi bị đọng vốn khoảng 40% ở các size to hoặc màu kén khách — dữ liệu từ 1 case cụ thể: nhập 100 áo polo, size XL màu tím/vàng tồn 40 cái, cuối vụ phải xả lỗ 50% để thu hồi vốn (Mục 3.2, Interview Snapshot). Con số 40% cần được kiểm chứng thêm trên nhiều shop trước khi khái quát hóa. |
+| **Success Metric** (baseline → target, cách đo) | - **Baseline:** Trung bình ~55 phút/tuần — tính từ tổng 5 bước quy trình hiện tại (Mục 4.1), phù hợp với khoảng 45–60 phút/tuần ghi nhận qua phỏng vấn 3 người bán (Mục 3.2). Tỷ lệ đọng vốn do lệch size/màu ước tính ~40% (dữ liệu từ 1 case, cần kiểm chứng thêm).<br>- **Target:** Giảm tổng thời gian lập danh sách nhập hàng xuống **dưới 20 phút/tuần**; giảm tỷ lệ tồn đọng các mã hàng kén khách sau 30 ngày xuống **dưới 15%**. Lý do chọn ngưỡng 15%: nếu hệ thống loại bỏ được yếu tố phán đoán cảm tính ở Bước 3 (chiếm 45% tổng thời gian và là nguồn gốc chính gây lệch cung–cầu), nhóm ước tính tỷ lệ đọng vốn có thể giảm khoảng 60% so với baseline (~40% → ~15%). Ngưỡng này cũng tương đương mức tồn đọng chấp nhận được của shop nhỏ khi một số biến thể ít khách là không tránh khỏi.<br>- **Cách đo:** Chủ shop tự bấm giờ ghi nhận thời gian lập đơn hàng mỗi tuần trong 4 tuần thử nghiệm; kiểm kê định kỳ đối chiếu tỷ lệ hàng tồn khó bán sau 30 ngày. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | - **AI KHÔNG được làm:** Không tự ý gửi đơn đặt hàng hoặc tự thực hiện thanh toán cho nhà cung cấp; không tự ý sửa đổi số liệu tồn kho thực tế trong POS; không tự động quyết định nhập các mặt hàng hot trend chưa có lịch sử dữ liệu.<br>- **Khi nào cần con người kiểm tra (HITL):** Bắt buộc con người kiểm tra ở Bước 3. Toàn bộ đề xuất số lượng của hệ thống chỉ ở trạng thái `[DRAFT]`; chủ shop trực tiếp rà soát số lượng, kiểm tra các cảnh báo cháy hàng, và cân đối với hạn mức ngân sách tiền mặt thực tế trước khi bấm duyệt. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+1. **Phản biện về Metric:** *"Success Metric ban đầu chỉ đo tốc độ (từ 55' xuống dưới 20'), nếu hệ thống làm rất nhanh nhưng đề xuất số lượng nhập sai khiến đọng vốn nhiều hơn thì sao?"*  
+   → **Nhóm đồng ý:** Đã bổ sung thêm metric đo lường chất lượng: *"giảm tỷ lệ tồn đọng các mã hàng kén khách sau 30 ngày xuống dưới 15%"*.
+2. **Phản biện về Rủi ro dữ liệu:** *"Nếu chỉ dựa vào số bán 7 ngày gần nhất thì vào các đợt chạy quảng cáo hoặc Flash Sale (doanh số tăng ảo ngắn hạn), hệ thống sẽ đề xuất nhập quá đà gây ngập kho."*  
+   → **Nhóm đồng ý:** Ghi nhận rủi ro này để xử lý tại Problem Statement v1 (Mục 7) bằng cách bổ sung tiêu chí loại trừ ngày có biến động khuyến mãi bất thường hoặc gắn tag "chiến dịch sale" vào thuật toán tính toán.
+3. **Phản biện về Giới hạn tự động:** *"Tại sao không để AI tự động gửi tin nhắn đặt hàng sang Zalo cho xưởng luôn để tiết kiệm thêm 2 phút?"*  
+   → **Nhóm không đồng ý:** Giữ nguyên boundary vì việc gửi đơn đặt hàng đi kèm nghĩa vụ thanh toán tài chính thật và mối quan hệ với đối tác xưởng may. Đây là ranh giới bắt buộc phải do chủ shop trực tiếp kiểm soát.
 
 ---
 
