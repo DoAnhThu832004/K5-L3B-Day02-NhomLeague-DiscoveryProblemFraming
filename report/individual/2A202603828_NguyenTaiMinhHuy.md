@@ -145,8 +145,8 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Làm sao để nhận dạng được comment nào hoặc đánh giá nào là đúng và cái nào là bot/spam? (Cho ý tưởng của Thanh Huy), Làm sao để đoán được hoặc nắm bắt được topic của người nói? (Cho ý tưởng của Quang Đạt), Góp ý cho Anh Thư: Mở rộng vấn đề, sử dụng AI để phân loại đồ và tính tồn kho cho từng chi nhánh thay vì chỉ một chỗ. |  |
+| Nhận phản biện | Câu hỏi tôi nhận được: Chưa nhận được | Tôi đã sửa gì:  |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |
 | Kiểm chứng / research | | |
