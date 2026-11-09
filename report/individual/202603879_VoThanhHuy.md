@@ -63,20 +63,19 @@ Sử dụng ChatGPT để đề xuất các tình huống cụ thể liên quan 
 [B1. Mở trang sản phẩm — 1 phút]
                   |
                   v
-[B2. Mở trang sản phẩm — 1 phút]
+B2. Mở trang sản phẩm — 1 phút
                   |
                   v
-[B3. Truy cập mục đánh giá — 5 phút]
+B3. Truy cập mục đánh giá — 5 phút
                   |
                   v
-[B4. Đọc 30 đánh giá — 15 phút]
-          <-- BOTTLENECK
+B4.(BOTTLENECK) Đọc 30 đánh giá — 15 phút
                   |
                   v
-[B5. Đối chiếu ý kiến — 4 phút]
+B5. Đối chiếu ý kiến — 4 phút
                   |
                   v
-[B6. Tổng hợp ưu, nhược điểm — 2 phút]
+B6. Tổng hợp ưu, nhược điểm — 2 phút
 
 Tổng: 28 phút/lần
 ```
@@ -101,20 +100,19 @@ Tổng: 28 phút/lần
 **Quy trình nháp hiện tại:**
 
 ```text
-[B1. Xác định nhu cầu — 4 phút]
+B1. Xác định nhu cầu — 4 phút
                   |
                   v
-[B2. Tìm 3 sản phẩm — 5 phút]
+B2. Tìm 3 sản phẩm — 5 phút
                   |
                   v
-[B3. Đọc thông số — 13 phút]
-          <-- BOTTLENECK 
+B3.(BOTTLENECK) Đọc thông số — 13 phút
                   |
                   v
-[B4. Đối chiếu thông số — 10 phút]
+B4. Đối chiếu thông số — 10 phút
                   |
                   v
-[B5. Đánh giá lựa chọn — 3 phút]
+B5. Đánh giá lựa chọn — 3 phút
 
 Tổng: 35 phút/lần
 ```
@@ -139,23 +137,22 @@ Tổng: 35 phút/lần
 **Quy trình nháp hiện tại:**
 
 ```text
-[B1. Xác định mẫu sản phẩm — 2 phút]
+B1. Xác định mẫu sản phẩm — 2 phút
                   |
                   v
-[B2. Tìm tại 3 cửa hàng — 7 phút]
-          <-- BOTTLENECK
+B2.(BOTTLENECK) Tìm tại 3 cửa hàng — 7 phút
                   |
                   v
-[B3. Ghi nhận giá bán — 2 phút]
+B3. Ghi nhận giá bán — 2 phút
                   |
                   v
-[B4. Đối chiếu giá — 3 phút]
+B4. Đối chiếu giá — 3 phút
                   |
                   v
-[B5. Lựa chọn cửa hàng — 1 phút]
+B5. Lựa chọn cửa hàng — 1 phút
 
 Tổng: 15 phút/lần
-```
+``` 
 
 *Các mốc thời gian từng bước là ước tính phân bổ, cần đo lại.*
 
