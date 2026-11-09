@@ -46,13 +46,13 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: Giảm thời gian học viên gặp khó khăn khi học và hoàn thành assignment.
+OUTCOME: Giảm thời gian kiểm tra tồn kho và cải thiện quyết định nhập hàng.
 |
-|__ Opportunity A: Học viên mất nhiều thời gian xác định nguyên nhân lỗi Python.
+|__ Opportunity A: Chủ cửa hàng mất thời gian đối chiếu tồn kho theo mẫu, màu sắc và kích cỡ.
 |
-|__ Opportunity B: Học viên khó đối chiếu bài làm với các yêu cầu trong rubric.
+|__ Opportunity B: Khó xác định mặt hàng bán chạy và có nguy cơ hết hàng.
 |
-|__ Opportunity C: Học viên khó xác định những kiến thức còn yếu sau buổi học.
+|__ Opportunity C: Khó quyết định số lượng nhập thêm để tránh thiếu hàng hoặc tồn kho quá nhiều.
 ```
 
 Những ý không đưa vào tầng Opportunity vì là giải pháp:
