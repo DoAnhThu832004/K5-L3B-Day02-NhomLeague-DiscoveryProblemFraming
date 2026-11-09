@@ -151,18 +151,63 @@ Sau khi có đủ dữ liệu, nhóm có thể xem xét sử dụng Machine Lear
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
+       BẮT ĐẦU
+           |
+           v
+  +-------------------------+
+  | 1. Mở dữ liệu tồn kho   |
+  |       (5 phút)          |
+  +-------------------------+
+           |
+           v
+  +-------------------------+
+  | 2. Tổng hợp số bán      |
+  |    trong 7 ngày (10')   |
+  +-------------------------+
+           |
+           v
+  +-------------------------+
+  | 3. Đối chiếu tồn vs bán |
+  |    Tính số lượng cần    |
+  |    nhập (25 phút)       |
+  +-------------------------+
+           |
+           v
+  +-------------------------+
+  | 4. Lập danh sách đặt    |
+  |    hàng nháp (10 phút)  |
+  +-------------------------+
+           |
+           v
+  +-------------------------+
+  | 5. Gửi xưởng qua Zalo   |
+  |    và chốt đơn (5 phút) |
+  +-------------------------+
+           |
+           v
+        HOÀN TẤT
 
+  TỔNG: 55 PHÚT/TUẦN
+  THỦ CÔNG: 5/5 BƯỚC
+
+  !!! BOTTLENECK !!!
+  Bước 3: Đối chiếu tồn kho
+  với số bán, tính toán thủ công.
+  Dễ nhầm lẫn giữa size/màu.
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Chủ shop / Nhân viên kho | Phần mềm POS (KiotViet/Sapo) hoặc file Google Sheets | Bảng số lượng tồn kho chi tiết theo từng mã SKU (mẫu, màu, size) | 5 phút / 1 lần mỗi tuần | Dữ liệu tồn kho tĩnh, chưa trừ hàng lỗi/đổi trả chưa kịp xử lý |
+| 2 | Chủ shop | Báo cáo đơn hàng sàn TMĐT (Shopee/TikTok) hoặc POS | Số lượng đã bán ra trong 7 ngày gần nhất theo từng SKU | 10 phút / 1 lần mỗi tuần | Phải lọc tay từng mẫu để xem màu nào, size nào đang chạy |
+| 3 | Chủ shop | Bảng tồn kho (Bước 1) + Báo cáo bán hàng (Bước 2) + Trí nhớ/kinh nghiệm | Số lượng dự kiến cần nhập thêm cho từng biến thể màu/size | **25 phút / 1 lần mỗi tuần** | **BOTTLENECK CHÍNH:** Tính toán nhẩm tỷ lệ bán/tồn, rất dễ phán đoán theo cảm tính |
+| 4 | Chủ shop | Số lượng dự kiến nhập (Bước 3) + Báo giá sỉ từ nhà cung cấp | File Excel / bảng ghi chú đơn đặt hàng (PO) kèm tổng tiền vốn | 10 phút / 1 lần mỗi tuần | Cân đối lại số lượng nhập với hạn mức tiền mặt hiện có của shop |
+| 5 | Chủ shop | Bảng đơn đặt hàng nháp (Bước 4) | Tin nhắn xác nhận đơn hàng và ngày giao từ nhà cung cấp | 5 phút / 1 lần mỗi tuần | Chuyển giao (Handoff) cho xưởng may / đại lý bỏ sỉ qua Zalo |
 
 **Bottleneck chính:**
+* **Vị trí nghẽn:** Bước 3 — Đối chiếu tồn kho với tốc độ bán và tính toán số lượng nhập thêm (**25/55 phút, chiếm 45% tổng thời gian**).
+* **Bản chất nghẽn:** Quá tải nhận thức (Cognitive Overload). Một shop thời trang có nhiều mã hàng, mỗi mã chia nhỏ thành nhiều biến thể màu sắc và kích cỡ (S, M, L, XL). Chủ shop phải tự tính nhẩm tỷ lệ tiêu thụ (tồn kho / số bán mỗi ngày) cho từng SKU riêng biệt mà không có công cụ hỗ trợ tính toán động.
+* **Hậu quả thực tế (từ phỏng vấn Mục 3.2):** Phán đoán dựa trên cảm tính hoặc trí nhớ dẫn đến lệch pha cung cầu: cháy hàng size chuẩn (M, L màu basic) chỉ sau 1 tuần, trong khi bị đọng vốn khoảng 40% ở các size to hoặc màu kén khách (XL màu tím/vàng), cuối vụ buộc phải xả lỗ 50% để thu hồi vốn lưu động.
 
 ### 4.2. Quy trình tương lai
 
