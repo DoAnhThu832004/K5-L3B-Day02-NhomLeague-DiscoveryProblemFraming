@@ -46,15 +46,20 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian học viên gặp khó khăn khi học và hoàn thành assignment.
+|
+|__ Opportunity A: Học viên mất nhiều thời gian xác định nguyên nhân lỗi Python.
+|
+|__ Opportunity B: Học viên khó đối chiếu bài làm với các yêu cầu trong rubric.
+|
+|__ Opportunity C: Học viên khó xác định những kiến thức còn yếu sau buổi học.
 ```
 
-Những ý đã gạch bỏ vì là solution đội lốt opportunity:
+Những ý không đưa vào tầng Opportunity vì là giải pháp:
 
--
+1. Xây chatbot tự động sửa lỗi Python.
+2. Tạo công cụ AI tự động kiểm tra assignment.
+3. Xây AI Tutor tự động đánh giá kiến thức của học viên.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
