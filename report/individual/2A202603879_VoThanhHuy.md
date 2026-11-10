@@ -165,7 +165,7 @@ Tổng thời gian kiểm tra: cần đo
 
 ### AI đã phản biện card thế nào
 
-| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
+| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì | 
 |---|---|---|
 | Ba vấn đề đều thuộc hoạt động so sánh sản phẩm, có thể trùng lặp về đối tượng và bối cảnh. | Cần tự đánh giá | Trong bản nháp đã phân biệt rõ ba bước: tìm hiểu đánh giá, so sánh thông số và so sánh giá bán. |
 | Chưa có bằng chứng người mua khác cũng gặp khó khăn tương tự. | Cần kiểm chứng | Giữ phạm vi actor là người mua trực tuyến; chưa khẳng định đây là vấn đề phổ biến và đề xuất phỏng vấn ở CP4. |
@@ -174,56 +174,113 @@ Tổng thời gian kiểm tra: cần đo
 | Có thể đang nghĩ đến AI trước khi đánh giá công cụ hiện có. | Đồng ý | Bổ sung phương án không dùng AI cho cả ba card và chỉ xem AI là giả thuyết cần thử nghiệm. |
 
 **Kết luận sơ bộ:** Tôi ưu tiên Card #1 để trình bày và tiếp tục kiểm chứng, nhưng chưa quyết định xây dựng công cụ AI khi chưa có thêm bằng chứng.
-
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
-
----
-
+| **Pitch Problem Card** | Tôi trình bày 3 vấn đề: đọc và tổng hợp đánh giá sản phẩm khi mua hàng, tìm cơ hội thực tập phù hợp với kỹ năng và theo dõi deadline từ nhiều nguồn khác nhau. Tôi giải thích actor, quy trình và bottleneck của từng vấn đề. | Nhóm có thêm các candidate thuộc lĩnh vực mua sắm, tìm việc và quản lý thời gian. Những vấn đề này được đưa vào phần hội tụ và phân nhóm ở CP3. |
+| **Phản biện bài của bạn khác** |  cách phân biệt đánh giá thật với spam/bot | Những câu hỏi này giúp làm rõ vấn đề cốt lõi, xem xét giải pháp đã tồn tại và nhận diện rủi ro trước khi đề xuất sử dụng AI. |
+| **Nhận phản biện** | Với vấn đề phân tích đánh giá sản phẩm, tôi nhận câu hỏi về cách phân biệt đánh giá thật với bot/spam. Với vấn đề quản lý deadline, tôi nhận câu hỏi liệu có thể gộp với candidate tổng hợp nhiệm vụ và deadline của thành viên khác không. | Những phản biện làm rõ hai điểm cần xử lý: tính đáng tin cậy của đánh giá sản phẩm và sự trùng lặp giữa các candidate. |
+| **Gom cluster / cây OST** | Tôi xem xét các candidate mình trình bày trong bảng cluster: phân tích đánh giá sản phẩm và tìm thực tập thuộc nhóm C — Phân tích thông tin để đưa ra quyết định; quản lý deadline thuộc nhóm B — Quản lý nhiệm vụ và thời gian. | Nhóm xác định được các pattern chung. Cây OST của candidate được chọn tập trung vào ba khó khăn: đối chiếu tồn kho, nhận biết hàng bán chạy và quyết định số lượng nhập. |
+| **Chọn candidate problem** | Tôi xem xét bảng shortlist của nhóm với ba candidate: quản lý tồn kho, tổng hợp deadline và phân loại phản ánh khách hàng.| Nhóm chọn candidate #1 — Quản lý tồn kho và hỗ trợ quyết định nhập hàng, đạt 32 điểm; hai candidate còn lại cùng đạt 28 điểm. |
+| **Kiểm chứng / research** | Tôi sử dụng ChatGPT để tìm hiểu và tổng hợp các giải pháp đã có: Square for Retail, Zoho Inventory và Inventory Planner; đồng thời làm rõ vai trò của từng phần mềm trong quản lý tồn kho, cảnh báo thiếu hàng và dự báo nhu cầu. Tôi tham khảo kết quả phỏng vấn và poll được ghi trong báo cáo nhóm.| Kết quả research gợi ý rằng cập nhật tồn kho và cảnh báo có thể dùng Rule/Script; AI chỉ cần xem xét cho phần dự báo nhu cầu khi có đủ dữ liệu. |
+| **Quy trình nhóm** | Tôi đối chiếu quy trình hiện tại và tương lai khi xây dựng phần Problem Statement: quy trình hiện tại 5 bước, khoảng 55 phút/tuần; quy trình tương lai dự kiến 5 bước, khoảng 16 phút/tuần. Tôi tìm hiểu vai trò của bước chủ cửa hàng duyệt bản nháp [DRAFT]. | Làm rõ bottleneck ở bước đối chiếu tồn kho với tốc độ bán (25 phút), điểm can thiệp của AI và ranh giới trách nhiệm của con người.|
+| **Problem Statement** | Tôi sử dụng ChatGPT và bài mẫu VinUni để hỗ trợ xây dựng lại Problem Statement v1 từ Problem Statement v0, kết quả kiểm chứng, quy trình trước/sau và các phản biện đã ghi nhận. Tôi tập trung vào Success Metric, Boundary, AI intervention point và tiêu chí đánh giá. | Bản đề xuất v1 bổ sung cách xử lý dữ liệu khuyến mãi bất thường, làm rõ trách nhiệm phê duyệt của chủ cửa hàng và phân biệt các bước Rule, AI, con người. [Xác nhận với nhóm trước khi ghi rằng bản này đã được thông qua.] |
+| **Mức can thiệp AI** | Tôi tìm hiểu sự khác nhau giữa Rule, Workflow và Agent; đồng thời làm rõ ý nghĩa của [DRAFT] và Human-in-the-loop. Tôi xem xét phương án Workflow kết hợp Rule/Script, AI dự báo và chủ cửa hàng phê duyệt. | Phương án đề xuất giúp AI hỗ trợ phân tích mà không tự đặt hàng hoặc thanh toán. Nhóm vẫn cần thống nhất chính thức mức can thiệp trong Mục 6. |
+| **Quyết định** | Tôi xem xét các rủi ro liên quan đến giá trị sử dụng, có khả năng sử dụng, dữ liệu và chi phí triển khai. | Đây là cơ sở để nhóm tiếp tục đánh giá trong quá trình xây dựng. |
 ## 5. Dùng AI
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
-
----
-
+| **CP1 Scan** | Tôi sử dụng ChatGPT để gợi ý thêm những khó khăn thường gặp khi mua hàng trực tuyến, bao gồm so sánh giá, thông số kỹ thuật và đánh giá sản phẩm. | Giúp tôi mở rộng các tình huống thực tế và chuyển vấn đề thành Job Story có actor, bối cảnh và dấu hiệu quan sát. | Một số ý tưởng trùng nhau về đối tượng hoặc bối cảnh. Số thứ tự của vấn đề được AI gợi ý cũng có lúc không thống nhất với bảng CP1 sau khi tôi thay đổi danh sách. | Tôi lựa chọn vấn đề phù hợp với trải nghiệm của mình và loại bỏ ý tưởng không muốn tiếp tục. Cần kiểm tra lại số thứ tự và bằng chứng thực tế trong bản cuối. |
+| **CP2 Problem Card** | Tôi nhờ AI hỗ trợ xây dựng Problem Card, xác định quy trình hiện tại, bottleneck, impact, success metric và phương án không dùng AI. | Giúp tôi hiểu rõ các khái niệm Bottleneck, Success Metric và cách trình bày vấn đề theo mẫu báo cáo. | AI từng phân bổ thời gian cho từng bước khi chưa có số liệu đo thực tế. Một sơ đồ còn có tổng thời gian 28 phút, không khớp baseline 25 phút. | Tôi nhận diện được sự khác nhau giữa số liệu thực tế và số liệu AI ước lượng. |
+| **CP4 Research** | Tôi sử dụng ChatGPT để tìm hiểu các giải pháp Square for Retail, Zoho Inventory và Inventory Planner, đồng thời so sánh các chức năng quản lý tồn kho, cảnh báo và dự báo nhu cầu. | Giúp tôi tổng hợp nhanh các giải pháp đã có và phân biệt tính năng có thể thực hiện bằng Rule với những phần có thể cân nhắc AI. | AI có thể mô tả chức năng công cụ ở mức khái quát mà chưa chứng minh hiệu quả trong cửa hàng cụ thể. AI cũng từng đưa ra câu nói phỏng vấn minh họa, không thể coi là trích dẫn nguyên văn thật. | Tôi yêu cầu giải thích nguồn link và phân biệt nghiên cứu tài liệu với bằng chứng phỏng vấn. |
+| **CP5 Quy trình** | Tôi sử dụng ChatGPT để đối chiếu thông tin từ quy trình hiện tại và quy trình tương lai khi chuẩn bị Problem Statement. | Giúp tôi làm rõ bottleneck 25/55 phút, quy trình dự kiến 16 phút, bước nào là Rule, bước nào có AI và bước nào con người phải kiểm tra. | AI có thể trình bày thời gian kỳ vọng như thể đã đạt được, trong khi nhóm chưa thử nghiệm hệ thống thực tế. | Tôi phân biệt baseline với target trong bản nháp: 55 phút là mốc hiện tại của báo cáo, còn 16 phút là kỳ vọng cần kiểm chứng. |
+| **CP5–6 Problem Statement** | Tôi cung cấp bài mẫu VinUni và báo cáo nhóm cho ChatGPT để hỗ trợ viết lại Mục 7 — Problem Statement v1 và tiêu chí đánh giá. | Giúp tôi liên kết Actor, Bottleneck, Impact, Success Metric, Boundary và AI intervention point; đồng thời làm rõ thay đổi từ v0 sang v1. | Một số đề xuất của AI chưa được nhóm xác nhận là quyết định cuối cùng. Việc đặt mục tiêu 80% hoặc chọn Workflow cũng không tự động có nghĩa nhóm đã kiểm chứng được hiệu quả. | Tôi yêu cầu bản v1 bám sát số liệu trong báo cáo nhóm, giữ mục tiêu thời gian dưới 20 phút và mục tiêu tồn đọng dưới 15%. |
+| **CP6 Mức can thiệp / quyết định** | Tôi nhờ ChatGPT giải thích trạng thái [DRAFT], nguyên tắc Human-in-the-loop và vai trò của AI trong quy trình nhập hàng. | Giúp tôi hiểu rằng AI chỉ đưa ra đề xuất, còn chủ cửa hàng kiểm tra và quyết định có đặt hàng hay không. | AI có thể đề xuất Workflow trước khi nhóm hoàn thành việc so sánh bốn mức No AI, Rule, Workflow và Agent hoặc đánh giá đầy đủ rủi ro. | Tôi xem Workflow là phương án cần được nhóm đánh giá, không mặc định dùng AI cho mọi bước. |
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+### 6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+**Sự kiện có thể nhắc đến:** Nhóm có nhiều candidate thuộc những lĩnh vực khác nhau như quản lý tồn kho, học tập, quản lý deadline và xử lý phản ánh khách hàng. Nhóm cuối cùng chọn vấn đề quản lý tồn kho.
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+**Tôi tự viết:**
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+- Điều tôi học được từ cách các bạn trình bày và phản biện là: .
+- Một vấn đề khiến tôi chú ý và lý do: .
+- Tôi sẽ áp dụng điều này khi xác định vấn đề trong tương lai bằng cách: .
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+### 6.2. Nhóm có lúc nào bị "solution-first" không? Lúc đó nhóm nhận ra và xử lý thế nào?
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+**Sự kiện có thể nhắc đến:** Khi thảo luận về dự báo nhập hàng, nhóm được hỏi tại sao cần Machine Learning nếu POS, Excel và quy tắc Min/Max đã giải quyết được nhiều công việc.
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+**Tôi tự viết:**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+- Theo tôi, nhóm có từng nghĩ đến giải pháp trước khi hiểu đầy đủ vấn đề.
+- Dấu hiệu khiến tôi nhận ra điều đó là: .
+- Sau phản biện, nhóm đã thay đổi cách tiếp cận như thế nào và tôi rút ra điều gì: .
 
----
+### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
+
+**Sự kiện có thể nhắc đến:** Khi tôi trình bày vấn đề tổng hợp đánh giá sản phẩm, Nguyễn Tài Minh Huy đặt câu hỏi về việc xác định đánh giá thật và bot/spam.
+
+**Tôi tự viết:**
+
+- Trước khi nhận câu hỏi, tôi nghĩ: .
+- Câu hỏi đó khiến tôi nhận ra: .
+- Tôi đã thay đổi hoặc giữ nguyên quan điểm ra sao, và vì sao: .
+- Nếu chưa chỉnh sửa Problem Card, tôi sẽ nói rõ điều gì vẫn cần kiểm chứng: .
+
+### 6.4. Kết quả kiểm chứng có làm tôi bất ngờ không? Điều gì?
+
+**Sự kiện có thể nhắc đến:** Báo cáo nhóm ghi nhận 3 cuộc phỏng vấn, poll 6 người và một trường hợp nhập 100 áo polo nhưng còn tồn 40 chiếc thuộc các biến thể khó bán. Một số người cũng cho rằng Excel hoặc quy tắc Min/Max đã đủ.
+
+**Tôi tự viết:**
+
+- Trước khi xem kết quả, tôi dự đoán: .
+- Kết quả khiến tôi bất ngờ hoặc chú ý nhất là: .
+- Lý do kết quả đó thay đổi hoặc củng cố suy nghĩ của tôi: .
+- Tôi cho rằng nhóm còn thiếu bằng chứng nào:.
+
+### 6.5. Điều khó nhất khi viết Problem Statement là gì?
+
+**Sự kiện có thể nhắc đến:** Nhóm phải phân biệt vấn đề của người dùng với giải pháp, đồng thời xác định bottleneck, baseline, target, boundary và điểm can thiệp của AI.
+
+**Tôi tự viết:**
+
+- Phần khó nhất đối với tôi là: .
+- Tôi từng hiểu chưa đúng điều gì: .
+- Sau khi làm bài và nhận hỗ trợ, tôi hiểu khác trước như thế nào: .
+- Ví dụ cụ thể trong bài quản lý tồn kho:.
+
+### 6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
+
+**Những điểm có thể cân nhắc:** Đo thời gian thực tế ở nhiều cửa hàng hơn; xác minh dữ liệu hàng tồn; so sánh Rule với AI; kiểm tra cách tính tỷ lệ tồn đọng; nhận diện dữ liệu bất thường do Flash Sale.
+
+**Tôi tự viết:**
+
+- Nếu làm lại, điều đầu tiên tôi thay đổi là: .
+- Tôi muốn hỏi nhóm một câu phản biện cụ thể: .
+- Tôi cho rằng câu hỏi đó quan trọng vì: .
+- Bằng chứng nào tôi muốn thu thập thêm: .
+
+### 6.7. Hiểu bài
+
+**Yêu cầu:** Tự giải thích trong 5–8 câu, không nhìn tài liệu.
+
+Hãy viết thành một đoạn theo chuỗi:
+
+**Problem → Quy trình → Metric → Boundary → Mức can thiệp AI → Quyết định**
+
+Các ý cần tự giải thích:
+
+1. Chủ cửa hàng thực sự đang gặp khó khăn gì?
+2. Quy trình kiểm tra và nhập hàng diễn ra như thế nào?
+3. Bước nào gây tốn nhiều thời gian nhất?
+4. Nhóm đo sự cải thiện bằng những chỉ số nào?
+5. AI không được phép làm gì?
+6. Vì sao cần kết hợp Rule, AI và sự kiểm tra của con người?
+7. Nhóm nên tiếp tục triển khai, kiểm chứng thêm hay không triển khai? Vì sao?
 
 ## 7. Tài liệu tham khảo
 
