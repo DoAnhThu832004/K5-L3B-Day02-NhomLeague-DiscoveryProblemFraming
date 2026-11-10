@@ -27,7 +27,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 |---|---------------------|------------------|---|
 | CP3 — Hội tụ nhóm | Nguyễn Tài Minh Huy          | Cả nhóm          | Cluster, cây OST, bảng chấm điểm |
 | CP4 — Kiểm chứng | Hoàng Quang Đạt     | Võ Thanh Huy     | Assumption map, snapshot hoặc survey |
-| CP4 — Research | Nguyễn Tài Minh Huy | Hoàng Quang Đạt  | Bảng research có link |
+| CP4 — Research | Hoàng Quang Đạt | Võ Thanh Huy  | Bảng research có link |
 | CP5 — Quy trình trước/sau | Đỗ Anh Thư          | Hoàng Quang Đạt  | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | Đỗ Anh Thư          | Cả nhóm          | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | Nguyễn Tài Minh Huy, Võ Thanh Huy     | Hoàng Quang Đạt,Đỗ Anh Thư | Ma trận, AI Canvas, eval, Problem Statement v1 |
