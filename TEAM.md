@@ -40,7 +40,6 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 ### HoangQuangDat-2A202603808
 
 **Phần việc phụ trách:**
-- Người phản biện chính (Devil's Advocate) trong toàn bộ các buổi pitch và chốt giải pháp.
 - Phụ trách chính phần Kiểm chứng The Mom Test (Mục 3.2) và xây dựng Assumption Map (Mục 3.1).
 - Thiết kế ranh giới an toàn (Boundary - Human-in-the-loop) và phương án Fallback cho quy trình tương lai (Mục 4.2).
 
