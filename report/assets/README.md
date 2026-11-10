@@ -14,3 +14,7 @@ cp5-workflow-future.png
 Nhớ che tên người, số điện thoại, email và thông tin nội bộ trong ảnh chụp màn hình.
 
 Sơ đồ Mermaid **không** đặt ở đây: viết thẳng khối code `mermaid` trong báo cáo để GitHub hiển thị (xem [SUBMISSION.md](../../SUBMISSION.md)).
+
+[Idea 1 của Nguyễn Tài Minh Huy](cp2-workflow-card-1-NguyenTaiMinhHuy)
+[Idea 2 của Nguyễn Tài Minh Huy](cp2-workflow-card-2-NguyenTaiMinhHuy)
+[Idea 3 của Nguyễn Tài Minh Huy](cp2-workflow-card-3-NguyenTaiMinhHuy)
