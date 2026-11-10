@@ -118,3 +118,39 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - AI chỉ nên hỗ trợ dự báo và đề xuất số lượng nhập hàng khi dữ liệu đủ tin cậy. Mọi đề xuất cần được con người kiểm tra, và hệ thống phải có phương án quay về Rule-based nếu AI không mang lại hiệu quả tốt hơn.
 
 - Phải có ranh giới rõ ràng: Việc nhập hàng dính tới tiền bạc của người ta nên tuyệt đối không để AI tự quyết hay tự gửi đơn cho xưởng, luôn phải để chủ shop kiểm tra và chốt lại cuối cùng.
+
+### VoThanhHuy-2A202603879
+
+**Phần việc phụ trách:**
+
+- Tham gia CP3 (Mục 2): Chuẩn bị và trình bày 3 Problem Cards, đóng góp ý kiến phản biện các candidate của thành viên khác.
+- Hỗ trợ CP4 (Mục 3): Tìm hiểu nhu cầu người dùng, xem xét kết quả kiểm chứng và nghiên cứu các giải pháp quản lý tồn kho hiện có.
+- Tham gia rà soát CP5 (Mục 4): Đối chiếu quy trình hiện tại và tương lai, xác định Bottleneck, Success Metric và các bước có thể ứng dụng Rule hoặc AI.
+- Tham gia CP6 (Mục 7): Xây dựng nội dung Problem Statement v1, đối chiếu với v0, bổ sung tiêu chí đánh giá đầu ra AI và các ranh giới an toàn.
+- Tham gia thảo luận về mức can thiệp AI và phương án triển khai thử nghiệm cho nhóm.
+
+**Đóng góp cụ thể (mình đã làm gì, ra sản phẩm gì):**
+
+- **CP3 - Pitch:** Chuẩn bị và trình bày 3 candidate: (1) Đọc và tổng hợp đánh giá sản phẩm khi mua hàng; (2) Tìm vị trí thực tập phù hợp với kỹ năng hiện tại; (3) Theo dõi deadline từ nhiều môn học hoặc hoạt động khác nhau.
+- **CP3 - Hội tụ:** Đóng góp các candidate vào quá trình phân nhóm. Candidate phân tích đánh giá sản phẩm và tìm thực tập thuộc cluster Phân tích thông tin để đưa ra quyết định; candidate quản lý deadline thuộc cluster Quản lý nhiệm vụ và thời gian. 
+- **CP4 - Kiểm chứng:** Hỗ trợ xem xét kết quả kiểm chứng trong báo cáo nhóm, gồm 3 cuộc phỏng vấn và khảo sát nhanh 6 người. Kết quả cho thấy người bán gặp khó khăn khi đối chiếu tồn kho theo màu/size, nhưng một số cửa hàng nhỏ có thể quản lý bằng Excel hoặc công thức Min/Max. Phần phỏng vấn trực tiếp do thành viên được phân công phụ trách thực hiện.
+- **CP5 - Quy trình:** Rà soát quy trình hiện tại gồm 5 bước, tổng thời gian khoảng 55 phút/tuần. Xác định bước đối chiếu tồn kho với tốc độ bán là Bottleneck chính, chiếm 25 phút. Đối chiếu quy trình tương lai dự kiến khoảng 16 phút/tuần, trong đó Rule xử lý số liệu.
+- **CP6 - Problem Statement v1:** Sử dụng báo cáo nhóm và bài mẫu VinUni để xây dựng, chỉnh sửa bản đề xuất Problem Statement v1. Bổ sung cách xử lý dữ liệu Flash Sale bất thường, làm rõ Success Metric, Boundary, AI intervention point và trách nhiệm kiểm tra của chủ shop. Xây dựng bảng so sánh v0–v1 và tiêu chí đánh giá đầu ra của AI.
+
+**Bằng chứng (phần nào trong group_report.md, file nào trong report/assets/, commit nào):**
+
+- **Mục 2.1 — Pitch:** Các candidate #3, #9, cùng những câu hỏi phản biện dành cho thành viên khác.
+- **Mục 2.2–2.4:** Bảng Cluster, Opportunity Solution Tree và kết quả chọn candidate quản lý tồn kho.
+- **Mục 3.3:** Bảng Research giải pháp quản lý tồn kho gồm Square for Retail, Zoho Inventory và Inventory Planner.
+- **Mục 4.1–4.3:** Quy trình hiện tại, quy trình tương lai và bảng Before/After được sử dụng để đối chiếu Bottleneck và các chỉ số.
+- **Mục 5 và Mục 7:** Problem Statement v0, v1, bảng thay đổi và tiêu chí đánh giá AI.
+- **Báo cáo cá nhân:** `report/individual/2A202603879_VoThanhHuy.md`.
+
+**Điều mình học được từ phần nhóm:**
+
+- **Cần xác định vấn đề trước khi lựa chọn công nghệ:** Một khó khăn thực tế cần được mô tả bằng actor, quy trình, Bottleneck và Impact rõ ràng. Không nên mặc định rằng mọi vấn đề đều cần AI.
+- **Phản biện giúp phát hiện những điểm còn thiếu:** Khi trình bày vấn đề phân tích đánh giá sản phẩm, câu hỏi về bình luận spam/bot giúp mình nhận ra cần chú ý đến độ tin cậy của dữ liệu, không chỉ tốc độ tổng hợp.
+- **Không phải bước nào cũng cần AI:** Trong bài toán tồn kho, các phép tính có quy tắc rõ ràng như tính tốc độ bán và cảnh báo số lượng thấp có thể dùng Rule/Script. AI chỉ nên được thử nghiệm ở phần dự báo nhu cầu phức tạp hơn.
+- **Success Metric phải đo được cả tốc độ và chất lượng:** Giảm thời gian lập danh sách nhập hàng là chưa đủ nếu hệ thống vẫn khiến cửa hàng nhập thừa hoặc thiếu hàng. Cần theo dõi thêm tồn kho khó bán và tình trạng hết hàng.
+- **Con người cần giữ quyền quyết định ở những bước có rủi ro:** AI có thể tạo bản đề xuất nhập hàng, nhưng chủ shop phải kiểm tra, cân đối ngân sách và phê duyệt. Hệ thống cần có phương án quay về Rule-based khi AI không đáng tin cậy.
+- **Kiểm chứng quan trọng hơn giả định:** Kết quả nghiên cứu và phỏng vấn giúp nhóm thu hẹp phạm vi vào các mặt hàng cơ bản có lịch sử bán ổn định, thay vì cố gắng dự báo cho tất cả sản phẩm thời trang.
