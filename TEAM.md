@@ -88,4 +88,39 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 - Bài toán hay phải từ thực tế: Thấy người nhà làm vất vả mới hiểu được nỗi đau thật, chứ không phải cứ nghĩ ra một ý tưởng nghe công nghệ rồi cố tìm cách nhét AI vào.
 - Khi vẽ quy trình mới thấy rõ vấn đề: Lúc chưa chia bước thì tưởng việc nào cũng cần AI, nhưng vẽ chi tiết ra mới thấy khâu đồng bộ số liệu hay xuất phiếu đặt hàng chỉ cần viết script thường là xong, AI chỉ cần hỗ trợ ở bước gợi ý số lượng.
+
+### NguyenTaiMinhHuy-2A202603828
+
+**Phần việc phụ trách:**
+
+- Tham gia CP3 (Mục 2): Đề xuất 3 Problem Cards, tham gia Pitch, phản biện các candidate của thành viên khác, hỗ trợ Cluster, Opportunity Solution Tree (OST) và đánh giá shortlist.
+- Phụ trách CP6 (Mục 6): Phân tích mức can thiệp AI, so sánh No AI / Rule / Workflow / Agent, xây dựng AI Canvas và trả lời hai câu hỏi Google PAIR.
+- Đề xuất phân chia rõ vai trò của Rule-based, AI và con người trong quy trình quản lý tồn kho, đồng thời xem xét những rủi ro khi AI dự báo sai.
+
+**Đóng góp cụ thể (mình đã làm gì, ra sản phẩm gì):**
+
+- **CP3 - Pitch:** Chuẩn bị 3 Problem Cards về Debug Python, kiểm tra assignment theo rubric và xác định kiến thức còn yếu sau buổi học. Đặt câu hỏi phản biện về đánh giá sản phẩm, tóm tắt file ghi âm và góp ý mở rộng quản lý tồn kho theo từng chi nhánh.
+- **CP3 - Cluster và OST:** Hỗ trợ phân nhóm 12 candidates theo các vấn đề tương tự, xây dựng các opportunity liên quan đến việc đối chiếu tồn kho, xác định mặt hàng bán chạy và quyết định số lượng cần nhập.
+- **CP3 - Shortlist:** Hỗ trợ so sánh Candidate #1 (Quản lý tồn kho), #6 (Tổng hợp deadline) và #12 (Phân loại phản ánh khách hàng). Nhóm lựa chọn Candidate #1 làm bài toán chính.
+- **CP6 – Mục 6.1:** Phân tích bài toán quản lý tồn kho có độ mơ hồ cao và độ phức tạp cao do nhu cầu mua hàng thay đổi theo màu sắc, kích cỡ, mùa vụ và chương trình khuyến mãi.
+- **CP6 - Mục 6.2:** So sánh bốn mức No AI, Rule, Workflow và Agent. Đề xuất Workflow kết hợp Rule + AI + Human-in-the-loop (HITL), nhưng chỉ giữ AI nếu kiểm thử chứng minh hiệu quả tốt hơn Rule-based.
+- **CP6 - Mục 6.3:** Xây dựng AI Canvas gồm Prediction, Judgment, Action, Outcome, Input và Feedback; làm rõ dữ liệu đầu vào, đề xuất nhập hàng [DRAFT] và trách nhiệm phê duyệt của chủ shop.
+- **CP6 - Mục 6.4:** Phân tích Augment so với Automate theo Google PAIR; đánh giá hai loại lỗi False Positive và False Negative. Đề xuất các biện pháp kiểm soát như chủ shop phê duyệt, cảnh báo số lượng bất thường và fallback về Rule-based.
+
+**Bằng chứng (phần nào trong group_report.md, commit nào):**
+
+- **Mục 2.1-2.4 (CP3):** Pitch, Cluster, Opportunity Solution Tree và Chấm điểm shortlist trong `report/team/group_report.md`.
+- **Mục 6.1:** Ma trận độ mơ hồ × độ phức tạp.
+- **Mục 6.2:** Bảng so sánh bốn mức No AI / Rule / Workflow / Agent và lý do lựa chọn Workflow.
+- **Mục 6.3:** AI Canvas rút gọn với 6 thành phần.
+- **Mục 6.4:** Hai câu hỏi Google PAIR về Augment/Automate và False Positive/False Negative.
+- Các ảnh lịch sử thay đổi GitHub cho thấy nội dung Mục 6 đã được cập nhật, bao gồm bảng so sánh bốn mức, AI Canvas và Google PAIR. Cần lấy mã commit đầy đủ từ GitHub để bổ sung bằng chứng chính xác.
+- Báo cáo cá nhân: `report/individual/2A202603828_NguyenTaiMinhHuy.md`.
+
+**Điều mình học được từ phần nhóm:**
+
+- Không nên bắt đầu bằng việc lựa chọn công nghệ AI khi chưa hiểu rõ vấn đề của người dùng. Nhiều bước như đồng bộ tồn kho, tính tốc độ bán và cảnh báo Min/Max có thể được giải quyết hiệu quả bằng Rule hoặc Script.
+- Workflow phù hợp hơn Agent đối với bài toán quản lý tồn kho vì quy trình đã có các bước xác định trước, còn quyết định nhập hàng liên quan trực tiếp đến ngân sách của chủ shop.
+- AI chỉ nên hỗ trợ dự báo và đề xuất số lượng nhập hàng khi dữ liệu đủ tin cậy. Mọi đề xuất cần được con người kiểm tra, và hệ thống phải có phương án quay về Rule-based nếu AI không mang lại hiệu quả tốt hơn.
+
 - Phải có ranh giới rõ ràng: Việc nhập hàng dính tới tiền bạc của người ta nên tuyệt đối không để AI tự quyết hay tự gửi đơn cho xưởng, luôn phải để chủ shop kiểm tra và chốt lại cuối cùng.
