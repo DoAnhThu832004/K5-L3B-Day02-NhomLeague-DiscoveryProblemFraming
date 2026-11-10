@@ -202,85 +202,57 @@ Tổng thời gian kiểm tra: cần đo
 
 ### 6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
 
-**Sự kiện có thể nhắc đến:** Nhóm có nhiều candidate thuộc những lĩnh vực khác nhau như quản lý tồn kho, học tập, quản lý deadline và xử lý phản ánh khách hàng. Nhóm cuối cùng chọn vấn đề quản lý tồn kho.
-
-**Tôi tự viết:**
-
-- Điều tôi học được từ cách các bạn trình bày và phản biện là: .
-- Một vấn đề khiến tôi chú ý và lý do: .
-- Tôi sẽ áp dụng điều này khi xác định vấn đề trong tương lai bằng cách: .
+Qua phần trình bày và phản biện của các thành viên, tôi nhận thấy một vấn đề không nhất thiết phải phức tạp mới đáng giải quyết. Các bạn đưa ra nhiều vấn đề gần gũi như quản lý tồn kho, theo dõi deadline và phân loại phản ánh khách hàng. Điều tôi học được là cần xác định rõ người gặp khó khăn, quy trình hiện tại và tác động của vấn đề thay vì chỉ tập trung vào ý tưởng sử dụng AI. Khi lựa chọn một vấn đề trong tương lai, tôi sẽ ưu tiên những vấn đề có bằng chứng thực tế và có thể đo lường hiệu quả cải thiện.
 
 ### 6.2. Nhóm có lúc nào bị "solution-first" không? Lúc đó nhóm nhận ra và xử lý thế nào?
 
-**Sự kiện có thể nhắc đến:** Khi thảo luận về dự báo nhập hàng, nhóm được hỏi tại sao cần Machine Learning nếu POS, Excel và quy tắc Min/Max đã giải quyết được nhiều công việc.
+Theo tôi, nhóm có lúc nghĩ đến giải pháp trước khi hiểu đầy đủ vấn đề, đặc biệt là ý tưởng sử dụng Machine Learning để dự báo số lượng hàng cần nhập. Tuy nhiên, khó khăn chính của chủ cửa hàng là phải kiểm tra và đối chiếu dữ liệu tồn kho với tốc độ bán của nhiều mẫu quần áo, màu sắc và kích cỡ.
 
-**Tôi tự viết:**
-
-- Theo tôi, nhóm có từng nghĩ đến giải pháp trước khi hiểu đầy đủ vấn đề.
-- Dấu hiệu khiến tôi nhận ra điều đó là: .
-- Sau phản biện, nhóm đã thay đổi cách tiếp cận như thế nào và tôi rút ra điều gì: .
+Sau khi nhận phản biện về các công cụ POS, Excel và quy tắc Min/Max, nhóm đã xem xét lại mức độ cần thiết của AI. Hướng tiếp cận được điều chỉnh thành sử dụng Rule cho các phép tính đơn giản và chỉ cân nhắc AI cho phần dự báo nhu cầu. Qua đó, tôi hiểu rằng cần tìm giải pháp phù hợp với vấn đề thay vì cố gắng sử dụng AI cho mọi công việc.
 
 ### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
 
-**Sự kiện có thể nhắc đến:** Khi tôi trình bày vấn đề tổng hợp đánh giá sản phẩm, Nguyễn Tài Minh Huy đặt câu hỏi về việc xác định đánh giá thật và bot/spam.
+Khi trình bày vấn đề đọc và tổng hợp đánh giá sản phẩm, tôi nhận được câu hỏi từ Nguyễn Tài Minh Huy về cách phân biệt đánh giá thật với các bình luận do bot hoặc spam tạo ra.
 
-**Tôi tự viết:**
+Ban đầu, tôi tập trung nhiều vào việc giảm thời gian đọc và tổng hợp ưu điểm, nhược điểm của sản phẩm. Câu hỏi này khiến tôi nhận ra rằng nếu dữ liệu đánh giá không đáng tin cậy thì AI có thể tổng hợp nhanh nhưng vẫn đưa ra kết quả sai lệch.
 
-- Trước khi nhận câu hỏi, tôi nghĩ: .
-- Câu hỏi đó khiến tôi nhận ra: .
-- Tôi đã thay đổi hoặc giữ nguyên quan điểm ra sao, và vì sao: .
-- Nếu chưa chỉnh sửa Problem Card, tôi sẽ nói rõ điều gì vẫn cần kiểm chứng: .
+Tôi chưa thay đổi hoàn toàn ý tưởng ban đầu, nhưng nhận thấy cần bổ sung việc kiểm chứng độ tin cậy của dữ liệu trước khi đánh giá hiệu quả của giải pháp. Đây cũng là điểm tôi cần tiếp tục nghiên cứu nếu phát triển Problem Card này.
 
 ### 6.4. Kết quả kiểm chứng có làm tôi bất ngờ không? Điều gì?
 
-**Sự kiện có thể nhắc đến:** Báo cáo nhóm ghi nhận 3 cuộc phỏng vấn, poll 6 người và một trường hợp nhập 100 áo polo nhưng còn tồn 40 chiếc thuộc các biến thể khó bán. Một số người cũng cho rằng Excel hoặc quy tắc Min/Max đã đủ.
+Kết quả kiểm chứng của nhóm có một số điểm khiến tôi chú ý. Báo cáo ghi nhận 3 cuộc phỏng vấn và một khảo sát nhanh với 6 người. Trong đó, có người cho rằng Excel hoặc công thức Min/Max đã đủ để quản lý tồn kho đối với cửa hàng nhỏ.
 
-**Tôi tự viết:**
+Điều này cho thấy không phải người dùng nào cũng cần một hệ thống AI mới. Ngoài ra, trường hợp nhập 100 áo polo nhưng còn tồn 40 chiếc thuộc các màu và kích cỡ khó bán cũng thể hiện hậu quả của việc nhập hàng không phù hợp với nhu cầu.
 
-- Trước khi xem kết quả, tôi dự đoán: .
-- Kết quả khiến tôi bất ngờ hoặc chú ý nhất là: .
-- Lý do kết quả đó thay đổi hoặc củng cố suy nghĩ của tôi: .
-- Tôi cho rằng nhóm còn thiếu bằng chứng nào:.
+Từ những kết quả này, tôi nhận thấy nhóm cần xác định rõ đối tượng sử dụng và kiểm chứng liệu AI có thực sự mang lại giá trị tốt hơn những công cụ đang có hay không.
 
 ### 6.5. Điều khó nhất khi viết Problem Statement là gì?
 
-**Sự kiện có thể nhắc đến:** Nhóm phải phân biệt vấn đề của người dùng với giải pháp, đồng thời xác định bottleneck, baseline, target, boundary và điểm can thiệp của AI.
+Đối với tôi, phần khó nhất là xác định Bottleneck và xây dựng Success Metric phù hợp. Nếu chỉ mô tả rằng chủ cửa hàng gặp khó khăn khi quản lý tồn kho thì vấn đề vẫn còn quá rộng.
 
-**Tôi tự viết:**
+Trong báo cáo nhóm, quy trình hiện tại gồm 5 bước, mất khoảng 55 phút mỗi tuần. Trong đó, bước đối chiếu tồn kho với tốc độ bán và tính số lượng cần nhập mất khoảng 25 phút. Việc xác định được bước nghẽn này giúp nhóm tập trung vào đúng phần cần cải thiện.
 
-- Phần khó nhất đối với tôi là: .
-- Tôi từng hiểu chưa đúng điều gì: .
-- Sau khi làm bài và nhận hỗ trợ, tôi hiểu khác trước như thế nào: .
-- Ví dụ cụ thể trong bài quản lý tồn kho:.
+Tôi cũng nhận thấy rằng giảm thời gian xử lý chưa đủ để đánh giá thành công. Hệ thống còn phải hạn chế nhập thừa, thiếu hàng và bảo đảm chủ cửa hàng có thể kiểm tra các đề xuất trước khi quyết định.
 
 ### 6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
 
-**Những điểm có thể cân nhắc:** Đo thời gian thực tế ở nhiều cửa hàng hơn; xác minh dữ liệu hàng tồn; so sánh Rule với AI; kiểm tra cách tính tỷ lệ tồn đọng; nhận diện dữ liệu bất thường do Flash Sale.
+Nếu được thực hiện lại, tôi sẽ ưu tiên thu thập thêm dữ liệu thực tế từ nhiều cửa hàng trước khi quyết định sử dụng AI. Tôi muốn kiểm tra thời gian quản lý tồn kho, số lượng mặt hàng thường bị nhập thừa và mức độ hiệu quả của những công cụ cửa hàng đang sử dụng.
 
-**Tôi tự viết:**
+Câu hỏi tôi muốn phản biện nhóm mạnh hơn là: **"Nếu Excel hoặc Rule-based đã có thể tính tốc độ bán và cảnh báo tồn kho, AI có cải thiện đủ nhiều để xứng đáng với chi phí và rủi ro bổ sung hay không?"**
 
-- Nếu làm lại, điều đầu tiên tôi thay đổi là: .
-- Tôi muốn hỏi nhóm một câu phản biện cụ thể: .
-- Tôi cho rằng câu hỏi đó quan trọng vì: .
-- Bằng chứng nào tôi muốn thu thập thêm: .
+Tôi cho rằng nhóm cần thử nghiệm và so sánh hai phương pháp trên cùng một bộ dữ liệu. Nếu AI không mang lại kết quả tốt hơn, việc sử dụng Rule-based sẽ đơn giản, dễ kiểm soát và phù hợp hơn với cửa hàng nhỏ.
 
 ### 6.7. Hiểu bài
 
-**Yêu cầu:** Tự giải thích trong 5–8 câu, không nhìn tài liệu.
+Các nội dung cần giải thích:
 
-Hãy viết thành một đoạn theo chuỗi:
-
-**Problem → Quy trình → Metric → Boundary → Mức can thiệp AI → Quyết định**
-
-Các ý cần tự giải thích:
-
-1. Chủ cửa hàng thực sự đang gặp khó khăn gì?
-2. Quy trình kiểm tra và nhập hàng diễn ra như thế nào?
-3. Bước nào gây tốn nhiều thời gian nhất?
-4. Nhóm đo sự cải thiện bằng những chỉ số nào?
-5. AI không được phép làm gì?
-6. Vì sao cần kết hợp Rule, AI và sự kiểm tra của con người?
-7. Nhóm nên tiếp tục triển khai, kiểm chứng thêm hay không triển khai? Vì sao?
+- Vấn đề quản lý tồn kho và quyết định nhập hàng của cửa hàng quần áo.
+- Quy trình hiện tại gồm 5 bước và Bottleneck nằm ở bước đối chiếu tồn kho với tốc độ bán.
+- Cách đo hiệu quả dựa trên thời gian xử lý, tỷ lệ hàng tồn khó bán và tình trạng thiếu hàng.
+- Ranh giới AI chỉ đề xuất, không tự đặt hàng hoặc thanh toán.
+- Lý do lựa chọn Workflow kết hợp Rule, AI và sự phê duyệt của con người.
+- Phương án quay về Rule-based khi AI đưa ra kết quả không đáng tin cậy.
+- Quan điểm cá nhân về việc nên thử nghiệm tiếp, cần kiểm chứng thêm hay không nên triển khai AI.
 
 ## 7. Tài liệu tham khảo
 
