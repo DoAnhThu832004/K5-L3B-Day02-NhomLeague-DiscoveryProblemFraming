@@ -411,31 +411,67 @@ Nếu AI không cải thiện kết quả so với Rule-based hoặc không đá
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | - **Cần thật sự:** 3/3 người bán qua phỏng vấn (Mục 3.2) xác nhận việc đối chiếu tồn kho và tính số lượng nhập cho từng biến thể màu/size là khâu gây mệt mỏi nhất mỗi tuần (chiếm 25/55 phút). Thiệt hại kinh tế hiện hữu: case shop Shopee polo tồn đọng 40% ở size to/màu kén khách, cuối vụ phải xả lỗ 50%.<br>- **Rủi ro tiềm ẩn:** Thói quen tính nhẩm dựa trên trực giác cá nhân ăn sâu vào tiềm thức chủ shop. Nếu bản nháp ban đầu của AI đưa ra gợi ý không sát thực tế hoặc giải thích mơ hồ, chủ shop sẽ nhanh chóng bỏ rơi công cụ và quay lại phương pháp tính tay truyền thống. Cần chứng minh giá trị ngay trong 2 tuần đầu qua việc tiết kiệm thời gian mà không gây tồn kho bất thường. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **Thấp** | - **Giao diện quen thuộc:** Kết quả đầu ra trả về trực tiếp trên Google Sheets / Excel hoặc giao diện web đơn giản giống bảng theo dõi kho hàng ngày, không bắt chủ shop phải làm quen với hệ sinh thái phần mềm phức tạp.<br>- **Minh bạch & dễ sửa:** Mỗi gợi ý số lượng nhập luôn đi kèm 3 dữ liệu đối chiếu cốt lõi: Số tồn hiện tại, Run-rate bán 7 ngày qua, và Số ngày còn hàng dự kiến. Đề xuất luôn ở trạng thái `[DRAFT]`, chủ shop chỉ mất 1 click chuột để chấp nhận, sửa lại số lượng theo ngân sách tiền mặt, hoặc từ chối gợi ý. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Thấp – Trung bình** | - **Khả thi về dữ liệu & công cụ:** Dữ liệu tồn kho và lịch sử bán hàng theo từng SKU đều có thể xuất dạng CSV/Excel dễ dàng từ các phần mềm POS phổ biến (KiotViet, Sapo) hoặc file quản lý đơn sàn Shopee/TikTok. Nhóm không tự huấn luyện mô hình ML từ đầu mà áp dụng kiến trúc Workflow: Script Python xử lý thống kê chuẩn hóa, LLM phân tích bối cảnh và sinh bản nháp giải thích qua API có sẵn.<br>- **Rủi ro kỹ thuật:** Doanh số tăng đột biến trong các đợt Flash Sale hoặc chạy quảng cáo ngắn hạn có thể làm méo mó tốc độ tiêu thụ bình thường, khiến AI ngộ nhận nhu cầu tăng cao. Giải pháp: Áp dụng Rule lọc outlier (loại bỏ ngày có doanh số > 3x trung bình) ở Bước 1 trước khi đưa vào mô hình AI. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Thấp** | - **Chi phí cực thấp:** Tần suất sử dụng chỉ 1 lần/tuần cho danh mục 30–50 SKU cơ bản. Chi phí gọi API LLM ước tính dưới 5.000 VNĐ/tuần (< 20.000 VNĐ/tháng), hoàn toàn không đáng kể so với giá trị tiết kiệm khoảng 2,5 giờ lao động của chủ shop mỗi tháng.<br>- **Pháp lý & Bảo mật:** Không thu thập, lưu trữ hay gửi bất kỳ dữ liệu định danh cá nhân (PII) nào của khách mua hàng (không có họ tên, SĐT, địa chỉ); chỉ xử lý dữ liệu ẩn danh về mã SKU, màu, size và số lượng.<br>- **Không rủi ro tài chính:** Ranh giới an toàn (Boundary) được khóa chặt: AI tuyệt đối không có quyền tự động tạo lệnh thanh toán hay tự ý gửi đơn cho xưởng; chủ shop là người chốt duyệt cuối cùng và tự gửi đơn qua Zalo. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Go (ở phạm vi nhỏ / Pilot có điều kiện)**
 
 **Lý do:**
+1. Trong 4 rủi ro theo khung của Marty Cagan (SVPG), **hoàn toàn không có rủi ro nào ở mức Cao**. Hai rủi ro ở mức Trung bình (Value và Feasibility) đều có biện pháp giảm thiểu cụ thể và có thể kiểm chứng thực nghiệm ngay trong giai đoạn pilot.
+2. Vấn đề có nỗi đau kinh tế rõ ràng, lặp lại hằng tuần và đo đếm được (chiếm 45% thời gian quy trình, rủi ro đọng vốn 40%).
+3. Kiến trúc Workflow kết hợp Rule + AI giải quyết trúng nút thắt nhận thức (Cognitive Overload ở Bước 3) mà không cần đầu tư hạ tầng phức tạp, chi phí vận hành siêu rẻ và triệt tiêu rủi ro tài chính nhờ nguyên tắc Human-in-the-loop (HITL).
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Go — pilot nhỏ nhất (4 tuần):**
+- **Đối tượng:** 01 cửa hàng thời trang nhỏ lẻ bán lẻ & online tại Hà Nội (cửa hàng của người quen thành viên nhóm).
+- **Phạm vi sản phẩm:** 30–50 SKU thuộc nhóm **hàng cơ bản (basic items)** có vòng đời dài và sức mua ổn định (áo thun trơn unisex, polo basic, sơ mi trắng, quần âu ống đứng). Tuyệt đối không áp dụng cho hàng hot trend hoặc mẫu mốt theo mùa vụ ngắn hạn.
+- **Cách thức vận hành (Không cần viết phần mềm phức tạp):**
+  - Hằng tuần vào sáng thứ Hai, chủ shop xuất file Excel tồn kho và báo cáo bán hàng 7 ngày gần nhất từ phần mềm POS (KiotViet).
+  - Script Python tự động làm sạch dữ liệu, tính run-rate và cảnh báo các ngày có Flash Sale.
+  - Dán bảng số liệu đã chuẩn hóa vào Prompt nguyên mẫu (Prototype Prompt) trên LLM để sinh bản đề xuất số lượng nhập nháp `[DRAFT]` kèm lý do số ngày tồn kho dự kiến.
+  - Chủ shop mở bản nháp trên Google Sheets, đối chiếu ngân sách tiền mặt thực tế, chỉnh sửa số lượng nếu cần và bấm giờ toàn bộ quá trình duyệt đơn.
+- **Chỉ số theo dõi trong 4 tuần:**
+  - Thời gian hoàn thành việc lập danh sách nhập hàng (mục tiêu: từ baseline 55 phút giảm xuống dưới 20 phút/tuần).
+  - Tỷ lệ đề xuất của AI được chủ shop chấp thuận giữ nguyên mà không phải sửa quá 20% số lượng (mục tiêu: đạt ≥ 80%).
+  - Đánh giá chất lượng sau 30 ngày: Đo lường tỷ lệ các SKU bị thiếu hàng (stock-out) và tỷ lệ hàng tồn kho không bán được sau 30 ngày (mục tiêu: < 15%).
 
 **Nếu Not Yet — cần kiểm chứng gì trước:**
+- Nếu qua tuần đầu phát hiện dữ liệu tồn kho trên phần mềm POS của shop bị sai lệch nghiêm trọng so với thực tế trong kho (do nhân viên quên quét mã xuất kho hoặc chưa cập nhật hàng lỗi đổi trả), nhóm sẽ tạm hoãn đưa AI vào và yêu cầu shop chuẩn hóa kỷ luật kiểm kê dữ liệu (No AI) trong 2 tuần trước khi kích hoạt lại pilot.
 
 **Nếu No-Go — nên làm gì thay AI:**
+- Nếu sau quá trình thử nghiệm nhận thấy AI không mang lại sự khác biệt đáng kể so với tính toán toán học đơn thuần, nhóm sẽ chuyển hẳn sang phương án **Rule-based thuần túy**: Thiết lập bảng tính Google Sheets tự động hóa hoàn toàn với công thức ngưỡng Tồn an toàn / Điểm đặt hàng lại (Reorder Point = Tốc độ bán 7 ngày x Thời gian xưởng giao 5 ngày + Biên an toàn 20%). Phương án này vẫn giải quyết được ~70% thời gian tính nhẩm thủ công mà không phụ thuộc vào LLM và không tốn chi phí API.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Ngưỡng dừng (Kill metrics):**
+- **Ngưỡng 1 (Chất lượng đề xuất kém):** Nếu sau 2 tuần liên tiếp của đợt pilot, chủ shop phải chỉnh sửa lại trên **40%** số lượng do AI đề xuất -> Dừng ngay bước AI, đưa quy trình về Rule-based Min/Max thuần túy.
+- **Ngưỡng 2 (Không tiết kiệm thời gian):** Nếu tổng thời gian kiểm tra, đối chiếu và sửa bản nháp của chủ shop vượt quá **35 phút/tuần** (tức AI làm phát sinh thêm gánh nặng rà soát thay vì giải phóng sức lao động) -> Dừng pilot để thiết kế lại prompt/format hiển thị hoặc hủy bỏ dự án.
+- **Ngưỡng 3 (Ảo giác gây nguy hiểm tài chính):** Nếu phát hiện dù chỉ 01 lần AI bịa số liệu (hallucination) đề xuất nhập số lượng bất thường vượt trần ngân sách cho phép (ví dụ gấp 3 lần hạn mức) do hiểu nhầm số liệu Flash Sale mà không đưa ra cảnh báo -> Dừng pilot khẩn cấp, bổ sung Hard Boundary (trần cứng bằng Rule) và rà soát lại toàn bộ prompt.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+### 9.1. Hạn chế của nghiên cứu hiện tại
+- **Cỡ mẫu kiểm chứng còn hẹp:** Baseline thời gian 55 phút và tỷ lệ chôn vốn ~40% (xả lỗ 50%) chủ yếu được lượng hóa từ 1 case study cụ thể (người bán áo polo unisex trên sàn Shopee) kết hợp phỏng vấn định tính 3 chủ shop (Mục 3.2). Số liệu này cần được đo đạc và thẩm định thêm trên mẫu 10–20 cửa hàng thuộc các phân khúc khác nhau trước khi khái quát hóa thành chuẩn ngành.
+- **Giới hạn phạm vi sản phẩm:** Mô hình đề xuất hiện tại mới chỉ giải quyết được nhóm hàng cơ bản (basic items) có vòng đời tiêu thụ ổn định. Chưa thể áp dụng cho các mặt hàng thời trang mốt nhanh (fast-fashion, hot trend trên TikTok) có chu kỳ sống dưới 2–3 tuần do thiếu hụt dữ liệu lịch sử để dự báo nhu cầu.
+- **Phụ thuộc vào tính kỷ luật dữ liệu:** Hệ thống vận hành trên nguyên lý "Garbage in, Garbage out". Nếu cửa hàng quản lý kho lỏng lẻo, không cập nhật kịp thời hàng đổi trả, hàng lỗi hoặc xuất kho không qua phần mềm, dữ liệu đầu vào bị sai lệch sẽ dẫn đến các đề xuất nhập hàng không chính xác.
+
+### 9.2. Hướng phát triển tiếp theo
+- **Giai đoạn 1 (Ngắn hạn - 4 tuần):** Triển khai trọn vẹn chương trình pilot thực nghiệm trên 01 cửa hàng đối tác với 30–50 SKU; hoàn thiện bộ eval gồm 15–20 test cases biên (edge cases: ngày hội siêu sale, thiếu nguồn cung từ xưởng, hàng đổi trả đột biến) để kiểm tra độ vững chắc của prompt.
+- **Giai đoạn 2 (Trung hạn - 2 đến 3 tháng):** Xây dựng module tích hợp API tự động với các hệ thống quản lý bán hàng phổ biến tại Việt Nam (KiotViet, Sapo, Haravan, TikTok Shop Seller Center) để tự động hóa hoàn toàn khâu xuất dữ liệu ở Bước 1, loại bỏ thao tác xuất/nhập file thủ công của chủ shop.
+- **Giai đoạn 3 (Dài hạn):** Nghiên cứu bổ sung tính năng phân tích dữ liệu ngoại sinh (External Market Signals) như xu hướng thời tiết (chuyển mùa) và từ khóa tìm kiếm xu hướng thời trang (Google Trends, TikTok trending hashtags) để nâng cao độ nhạy bén trong việc đề xuất cơ cấu size/màu đón đầu các dịp lễ, Tết.
+
+---
 
 ## 10. Tài liệu tham khảo
 
--
+1. **Cagan, M. (2017).** *Inspired: How to Create Tech Products Customers Love* (2nd ed.). John Wiley & Sons. (Khung 4 Rủi ro sản phẩm: Value, Usability, Feasibility, Viability - Silicon Valley Product Group).
+2. **Fitzpatrick, R. (2013).** *The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you.* Robfitz Ltd. (Nguyên tắc phỏng vấn kiểm chứng nhu cầu khách hàng qua hành vi quá khứ, loại trừ lời khen xã giao).
+3. **Torres, T. (2021).** *Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value.* Product Talk LLC. (Mô hình Cây giải pháp cơ hội - Opportunity Solution Tree để hội tụ bài toán từ kết quả mong muốn).
+4. **Agrawal, A., Gans, J., & Goldfarb, A. (2018).** *Prediction Machines: The Simple Economics of Artificial Intelligence.* Harvard Business Press. (Khung phân tích AI Canvas: phân rã thành phần Prediction, Judgment, Action, Outcome, Input, Feedback).
+5. **Google PAIR (People + AI Research). (2019).** *People + AI Guidebook: Designing human-centered AI products.* Google LLC. https://pair.withgoogle.com/guidebook/ (Nguyên lý thiết kế AI hỗ trợ con người: Lựa chọn Augment vs Automate, cân bằng sai lệch False Positive vs False Negative, và thiết kế cơ chế chuyển giao kiểm soát).
+6. **Anthropic. (2024).** *Building Effective Agents.* Anthropic Research. https://www.anthropic.com/research/building-effective-agents (Phân biệt kiến trúc Workflow và Autonomous Agent; nguyên tắc ưu tiên mức độ can thiệp đơn giản nhất đủ giải quyết bài toán).
+7. **Bland, D. J., & Osterwalder, A. (2019).** *Testing Business Ideas: A Field Guide for Rapid Experimentation.* John Wiley & Sons. (Bản đồ phân loại giả định theo trục Tầm quan trọng × Bằng chứng - Assumption Mapping).
+8. **Square for Retail & Zoho Inventory Documentation. (2024).** *Retail Inventory Management & Reorder Point Formulas.* Square / Zoho Official Resources. (Nghiên cứu hiện trạng và các công thức ngưỡng đặt hàng lại tiêu chuẩn trong ngành bán lẻ).
